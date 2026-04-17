@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hipnoterapia Bochenek — Twój klucz do wolności i spełnienia</title>
+  <meta name="description" content="Sesje hipnoterapii stacjonarnie i online w Gdańsku. Certyfikowany hipnoterapeuta — pokonaj lęki, nawyki i stres. Darmowa konsultacja.">
+
+  <meta property="og:title" content="Hipnoterapia Bochenek">
+  <meta property="og:site_name" content="Hipnoterapia Bochenek">
+  <meta property="og:description" content="Sesje hipnoterapii stacjonarnie i online w Gdańsku. Certyfikowany hipnoterapeuta.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-main">Hipnoterapia Bochenek</span>
+        <span class="nav__logo-sub">Tomasz Bochenek</span>
+      </a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu">
+        <li><a href="/" aria-current="page">Strona główna</a></li>
+        <li><a href="pages/oferta.html">Oferta</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+      </ul>
+      <a href="pages/umow-wizyte.html" class="btn btn--primary nav__cta">Umów wizytę</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="assets/images/photo_2025-09-25_20-23-47-mfzqs6ab.jpg" alt="" loading="eager">
+    </div>
+    <div class="hero__content container">
+      <h1 class="fade-in">Twój klucz do wolności i&nbsp;spełnienia</h1>
+      <p class="hero__subtitle fade-in fade-in-delay-1">Wyobraź sobie moment, w&nbsp;którym lęk czy uporczywe nawyki przestają Cię więzić. Hipnoterapia otworzy drzwi do Twojej wewnętrznej siły.</p>
+      <div class="hero__actions fade-in fade-in-delay-2">
+        <a href="pages/umow-wizyte.html" class="btn btn--primary btn--lg">Umów darmową konsultację</a>
+        <a href="pages/oferta.html" class="btn btn--outline btn--lg">Zobacz ofertę</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="trust">
+    <div class="container">
+      <div class="trust__grid fade-in">
+        <div class="trust__card">
+          <div class="trust__card-icon" aria-hidden="true">&#127891;</div>
+          <strong class="trust__card-title">Certyfikowana Szkoła Hipnoterapii</strong>
+          <span class="trust__card-sub">Uznanie międzynarodowe</span>
+        </div>
+        <div class="trust__card">
+          <div class="trust__card-icon" aria-hidden="true">&#127979;</div>
+          <strong class="trust__card-title">Licencjat z&nbsp;Psychologii w&nbsp;Biznesie</strong>
+          <span class="trust__card-sub">Wykształcenie akademickie</span>
+        </div>
+        <div class="trust__card">
+          <div class="trust__card-icon" aria-hidden="true">&#128218;</div>
+          <strong class="trust__card-title">Dr. Jordan B. Peterson Academy</strong>
+          <span class="trust__card-sub">Aktywny student</span>
+        </div>
+        <div class="trust__card">
+          <div class="trust__card-icon" aria-hidden="true">&#8987;</div>
+          <strong class="trust__card-title">2 lata praktyki hipnoterapii</strong>
+          <span class="trust__card-sub">Setki przeprowadzonych sesji</span>
+        </div>
+        <div class="trust__card">
+          <div class="trust__card-icon" aria-hidden="true">&#128187;</div>
+          <strong class="trust__card-title">Sesje online i&nbsp;stacjonarnie</strong>
+          <span class="trust__card-sub">Gdańsk i&nbsp;cała Polska</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="quiz" id="quiz">
+    <div class="container">
+      <div class="quiz__card fade-in">
+        <div class="quiz__progress">
+          <div class="quiz__progress-bar" id="quizProgress"></div>
+        </div>
+
+        <!-- INTRO -->
+        <div class="quiz__step quiz__step--active" data-step="intro">
+          <span class="section-label">Test — 2 minuty</span>
+          <h2>Sprawdź, czy hipnoterapia jest dla Ciebie</h2>
+          <p class="quiz__desc">Odpowiedz na 5 krótkich pytań. Na końcu otrzymasz spersonalizowaną analizę i&nbsp;konkretne wskazówki.</p>
+          <button class="btn btn--primary btn--lg quiz__next" type="button">Zaczynam</button>
+        </div>
+
+        <!-- Q1 -->
+        <div class="quiz__step" data-step="1">
+          <span class="quiz__counter">Pytanie 1 z 5</span>
+          <h3>Co najbardziej chciałbyś zmienić w&nbsp;swoim życiu?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-category="lek" type="button">Pozbyć się lęku lub fobii</button>
+            <button class="quiz__option" data-category="nawyk" type="button">Rzucić szkodliwy nawyk (palenie, objadanie się)</button>
+            <button class="quiz__option" data-category="stres" type="button">Zmniejszyć stres i poprawić sen</button>
+            <button class="quiz__option" data-category="pewnosc" type="button">Zbudować pewność siebie</button>
+            <button class="quiz__option" data-category="trauma" type="button">Przepracować trudne doświadczenie lub traumę</button>
+            <button class="quiz__option" data-category="rozwoj" type="button">Osiągnąć więcej w sporcie lub biznesie</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz__step" data-step="2">
+          <span class="quiz__counter">Pytanie 2 z 5</span>
+          <h3>Jak długo zmagasz się z&nbsp;tym problemem?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-score="1" type="button">Kilka tygodni</button>
+            <button class="quiz__option" data-score="2" type="button">Kilka miesięcy</button>
+            <button class="quiz__option" data-score="3" type="button">Ponad rok</button>
+            <button class="quiz__option" data-score="4" type="button">Wiele lat — nie pamiętam kiedy się zaczęło</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz__step" data-step="3">
+          <span class="quiz__counter">Pytanie 3 z 5</span>
+          <h3>Czy próbowałeś już innych metod?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-score="1" type="button">Nie, to mój pierwszy krok</button>
+            <button class="quiz__option" data-score="2" type="button">Tak, ale bez trwałych efektów</button>
+            <button class="quiz__option" data-score="3" type="button">Tak, wiele razy — nic nie działa</button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz__step" data-step="4">
+          <span class="quiz__counter">Pytanie 4 z 5</span>
+          <h3>Jak bardzo ten problem wpływa na Twoje codzienne życie?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-score="1" type="button">Trochę mi przeszkadza</button>
+            <button class="quiz__option" data-score="2" type="button">Dość mocno — ogranicza mnie w wielu sytuacjach</button>
+            <button class="quiz__option" data-score="3" type="button">Bardzo — czuję, że to blokuje moje życie</button>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="quiz__step" data-step="5">
+          <span class="quiz__counter">Pytanie 5 z 5</span>
+          <h3>Jak szybko chciałbyś zobaczyć zmianę?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-score="1" type="button">Nie spieszę się — ważna jest jakość</button>
+            <button class="quiz__option" data-score="2" type="button">W ciągu kilku tygodni</button>
+            <button class="quiz__option" data-score="3" type="button">Jak najszybciej — jestem gotowy na zmianę</button>
+          </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="quiz__step" data-step="result">
+          <div class="quiz__result" id="quizResult">
+            <!-- filled by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USŁUGI -->
+  <section class="services" id="uslugi">
+    <div class="container">
+      <div class="section-header section-header--center fade-in">
+        <span class="section-label">Co Cię czeka</span>
+        <h2>Sesja Hipnoterapii</h2>
+        <span class="section-header__line"></span>
+        <p class="section-subtitle">Kompleksowe wsparcie na każdym etapie Twojej transformacji.</p>
+      </div>
+      <div class="services__grid">
+        <article class="service-card fade-in">
+          <span class="service-card__icon" aria-hidden="true">&#9673;</span>
+          <h3>Głęboka sesja hipnoterapii</h3>
+          <p>Bezpieczna, indywidualna podróż, która uwolni Cię od tego, co Cię ogranicza, w&nbsp;ciepłej i&nbsp;wspierającej atmosferze.</p>
+        </article>
+        <article class="service-card fade-in">
+          <span class="service-card__icon" aria-hidden="true">&#9825;</span>
+          <h3>Opieka między sesjami</h3>
+          <p>Jestem z&nbsp;Tobą — telefonicznie i&nbsp;przez SMS — by wspierać Cię na każdym kroku Twojej transformacji.</p>
+        </article>
+        <article class="service-card fade-in">
+          <span class="service-card__icon" aria-hidden="true">&#9734;</span>
+          <h3>Proste narzędzia na co dzień</h3>
+          <p>Nauczę Cię technik, które pozwolą Ci radzić sobie ze stresem, lękiem czy wyzwaniami, gdy tylko ich potrzebujesz.</p>
+        </article>
+        <article class="service-card fade-in">
+          <span class="service-card__icon" aria-hidden="true">&#8734;</span>
+          <h3>Trwała zmiana</h3>
+          <p>Po każdej sesji otrzymasz plan, jak pielęgnować swoją siłę i&nbsp;utrzymać efekt, by Twoje nowe życie trwało.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAK WYGLĄDA SESJA -->
+  <section class="walkthrough">
+    <div class="container">
+      <div class="section-header section-header--center fade-in">
+        <span class="section-label">Krok po kroku</span>
+        <h2>Jak wygląda sesja?</h2>
+        <p class="section-subtitle">Żadnych niespodzianek. Wiesz dokładnie, co Cię czeka na każdym etapie.</p>
+      </div>
+      <div class="walkthrough__grid">
+        <div class="walkthrough__step fade-in fade-in-delay-1">
+          <div class="walkthrough__icon" aria-hidden="true">&#128172;</div>
+          <h4>Rozmowa</h4>
+          <p>Omówimy Twoje cele i&nbsp;oczekiwania. Odpowiem na każde pytanie.</p>
+        </div>
+        <div class="walkthrough__step fade-in fade-in-delay-2">
+          <div class="walkthrough__icon" aria-hidden="true">&#128524;</div>
+          <h4>Relaksacja</h4>
+          <p>Wprowadzę Cię w&nbsp;stan głębokiego spokoju. Jesteś świadomy przez cały czas.</p>
+        </div>
+        <div class="walkthrough__step fade-in fade-in-delay-3">
+          <div class="walkthrough__icon" aria-hidden="true">&#10024;</div>
+          <h4>Praca z&nbsp;podświadomością</h4>
+          <p>Dotrę do źródła problemu i&nbsp;wprowadzę pozytywne zmiany.</p>
+        </div>
+        <div class="walkthrough__step fade-in fade-in-delay-4">
+          <div class="walkthrough__icon" aria-hidden="true">&#127793;</div>
+          <h4>Plan działania</h4>
+          <p>Otrzymasz techniki do pracy w&nbsp;domu i&nbsp;konkretny plan następnych kroków.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="gallery__grid fade-in">
+        <img src="assets/images/photo_2025-09-25_19-26-02-mfzou2fe.jpg" alt="Gabinet hipnoterapii" loading="lazy">
+        <img src="assets/images/photo_2025-09-25_19-26-09-mfzou0du.jpg" alt="Gabinet hipnoterapii" loading="lazy">
+        <img src="assets/images/photo_2025-09-25_19-25-56-mfzou4de.jpg" alt="Gabinet hipnoterapii" loading="lazy">
+        <img src="assets/images/photo_2025-09-25_19-26-05-mfzotyf0.jpg" alt="Gabinet hipnoterapii" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- WIDEO -->
+  <section class="video-section">
+    <div class="container fade-in">
+      <video controls preload="metadata" poster="assets/images/photo_2025-09-25_19-55-40-mfzps0im.jpg">
+        <source src="assets/video/23-mfztoz4j.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- O MNIE -->
+  <section class="about" id="o-mnie">
+    <div class="container about__layout">
+      <div class="about__photos fade-in">
+        <img src="assets/images/photo_2025-09-27_18-26-12-mg2hldnw-mg2hmhy5.jpg" alt="Hipnoterapeuta" loading="lazy">
+        <img src="assets/images/photo_2025-09-27_18-26-09-mg2hgikn.jpg" alt="Hipnoterapeuta" loading="lazy">
+      </div>
+      <div class="about__text fade-in fade-in-delay-1">
+        <span class="section-label">O mnie</span>
+        <h2>Certyfikowany hipnoterapeuta</h2>
+        <p>Od lat fascynuję się tajemnicami ludzkiego umysłu, a&nbsp;od 2 lat prowadzę praktykę hipnoterapeutyczną, pomagając klientom w&nbsp;realnej zmianie.</p>
+        <p>Ukończyłem certyfikowaną profesjonalną Szkołę Hipnoterapii uznaną na całym świecie, licencjat z&nbsp;Psychologii w&nbsp;Biznesie, aktualnie jestem studentem w&nbsp;<strong>Dr. Jordan B. Peterson Academy</strong>.</p>
+        <p>Prowadzę sesje hipnoterapii stacjonarnie oraz online, szkolę z&nbsp;zakresu autohipnozy oraz hipnoterapii. Najbliższe mi jest podejście holistyczne.</p>
+        <p>5 lat życia za granicą — w&nbsp;kraju, gdzie równowaga między życiem a&nbsp;pracą otwiera serce — nauczyło mnie, jak słuchać siebie i&nbsp;innych z&nbsp;prawdziwą empatią.</p>
+        <p class="about__mission"><strong>Moja misja?</strong> Pomóc Ci — gotowemu na zmianę, spragnionemu wolności — odnaleźć siłę, która już w&nbsp;Tobie drzemie.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIE -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header section-header--center fade-in">
+        <span class="section-label">Opinie</span>
+        <h2>Co mówią klienci</h2>
+        <p class="section-subtitle">Anonimowe historie osób, które zdecydowały się na zmianę.</p>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial fade-in fade-in-delay-1">
+          <div class="testimonial__stars" aria-label="5 gwiazdek">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial__text">"Przyszłam z&nbsp;lękiem przed lataniem, który paraliżował mnie od 8 lat. Po 3&nbsp;sesjach poleciałam na wakacje z&nbsp;rodziną. Nie wierzyłam, że to możliwe."</p>
+          <div class="testimonial__author">Katarzyna, 34 lata</div>
+          <div class="testimonial__detail">Lęk przed lataniem — 3 sesje</div>
+        </div>
+        <div class="testimonial fade-in fade-in-delay-2">
+          <div class="testimonial__stars" aria-label="5 gwiazdek">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial__text">"Paliłem 15 lat. Próbowałem wszystkiego — plastry, tabletki, siła woli. Po 2&nbsp;sesjach hipnoterapii minął rok i&nbsp;nie miałem ani jednego papierosa."</p>
+          <div class="testimonial__author">Marcin, 41 lat</div>
+          <div class="testimonial__detail">Rzucenie palenia — 2 sesje</div>
+        </div>
+        <div class="testimonial fade-in fade-in-delay-3">
+          <div class="testimonial__stars" aria-label="5 gwiazdek">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial__text">"Bezsenność i&nbsp;chroniczny stres niszczyły mi życie. Tomek nauczył mnie technik, które stosuję do dziś. Śpię spokojnie, a&nbsp;stres przestał mną rządzić."</p>
+          <div class="testimonial__author">Anna, 29 lat</div>
+          <div class="testimonial__detail">Bezsenność i stres — 4 sesje</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog-preview" id="blog">
+    <div class="container">
+      <div class="section-header section-header--center fade-in">
+        <span class="section-label">Blog</span>
+        <h2>Praktyczna wiedza na co dzień</h2>
+        <p class="section-subtitle">Dla tych, którzy szukają inspiracji i&nbsp;narzędzi do codziennej zmiany.</p>
+      </div>
+      <div class="blog-preview__grid">
+        <article class="blog-card fade-in fade-in-delay-1">
+          <div class="blog-card__image">
+            <img src="assets/images/unsplash-image-mg2mvm15.jpg" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <time datetime="2025-09-27">27 września 2025</time>
+            <h3>Pozytywne sposoby patrzenia na świat: jak je rozwijać?</h3>
+            <p>Rozwijanie pozytywnego spojrzenia na świat opiera się na praktykowaniu wdzięczności, stosowaniu afirmacji i&nbsp;mindfulness.</p>
+            <a href="pages/blog-pozytywne-sposoby.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+        <article class="blog-card fade-in fade-in-delay-2">
+          <div class="blog-card__image">
+            <img src="assets/images/unsplash-image-mg2nppob.jpg" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <time datetime="2025-09-26">26 września 2025</time>
+            <h3>Hipnoterapia i&nbsp;jej najbardziej przebadane zastosowania</h3>
+            <p>Hipnoterapia, czyli terapia wykorzystująca stan hipnozy, to metoda, która zyskuje uznanie dzięki badaniom potwierdzającym jej skuteczność.</p>
+            <a href="pages/blog-hipnoterapia-zastosowania.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+      </div>
+      <div class="blog-preview__cta fade-in">
+        <a href="pages/blog.html" class="btn btn--outline">Zobacz wszystkie artykuły</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header section-header--center fade-in">
+        <span class="section-label">FAQ</span>
+        <h2>Często zadawane pytania</h2>
+      </div>
+      <div class="faq__list fade-in">
+        <details class="faq__item">
+          <summary>Jak wygląda pierwsza wizyta u&nbsp;hipnoterapeuty?</summary>
+          <p>Podczas pierwszej wizyty przeprowadzam wywiad, uświadamiam jak będzie wyglądała sesja. Na tej podstawie ustalamy plan działania i&nbsp;zaczynam sesję właściwą do Twoich potrzeb, problemów już na pierwszym spotkaniu.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Czy przygotowujesz indywidualne ćwiczenia po sesji?</summary>
+          <p>Tak, tworzę spersonalizowane plany ćwiczeń mentalnych dostosowane do potrzeb, preferencji i&nbsp;trybu życia. Uwzględniam także uwagi klienta. Dodatkowo jestem dostępny do kontaktu pomiędzy sesjami, aby w&nbsp;pełni być obecnym i&nbsp;przeprowadzić proces zmiany razem z&nbsp;Tobą.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Czy mogę skorzystać z&nbsp;konsultacji online?</summary>
+          <p>Tak, oferuję zarówno wizyty stacjonarne jak i&nbsp;online. Przewagą spotkań online jest komfort, brak planowania logistyki przyjazdu jak i&nbsp;znane i&nbsp;komfortowe miejsce swojego domu.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Czy zajmujesz się hipnoterapią dla sportowców?</summary>
+          <p>Tak, specjalizuję się integrowaniu wartości i&nbsp;wyznaczaniu celu. Każdy z&nbsp;nas ma unikalne zasoby które warto odkryć, swoją unikalną silną stronę której tak często szukamy w&nbsp;życiu.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Ile kosztuje wizyta u&nbsp;hipnoterapeuty?</summary>
+          <p>Pojedyncza sesja to 750&nbsp;zł (90–120 min). Pakiet Transformacji (3&nbsp;sesje) to 2000&nbsp;zł — oszczędzasz 250&nbsp;zł. Pierwsza konsultacja jest zawsze darmowa. <a href="pages/oferta.html">Zobacz pełną ofertę</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container fade-in">
+      <p>Hipnoterapia to metoda, która zmieni Twoje życie, uwalniając Cię od blokad i&nbsp;lęków. Zrób ten odważny krok już dziś.</p>
+      <a href="pages/umow-wizyte.html" class="btn btn--primary btn--lg">Darmowa konsultacja</a>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="contact" id="kontakt">
+    <div class="container contact__layout">
+      <div class="contact__info fade-in">
+        <span class="section-label">Kontakt</span>
+        <h2>Porozmawiajmy</h2>
+        <p><strong>Email:</strong> <a href="mailto:hipnoterapiabochenek@gmail.com">hipnoterapiabochenek@gmail.com</a></p>
+        <p><strong>Tel:</strong> <a href="tel:+48732137266">+48 732 137 266</a></p>
+        <p><strong>Lokalizacja:</strong> Gdańsk</p>
+        <div class="contact__hours">
+          <h3>Godziny otwarcia</h3>
+          <p>Pon–Pt: 8:00–20:00</p>
+          <p>Sob: 8:00–20:00</p>
+          <p>Niedz: 8:00–20:00</p>
+        </div>
+      </div>
+      <div class="contact__map fade-in fade-in-delay-1">
+        <iframe src="https://maps.google.com/maps?q=Hipnoterapia+Bochenek+Gda%C5%84sk&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy" title="Hipnoterapia Bochenek — lokalizacja"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="pages/umow-wizyte.html" class="btn btn--primary">Umów darmową konsultację</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__layout">
+      <a href="/" class="footer__logo">
+        <span class="nav__logo-main">Hipnoterapia Bochenek</span>
+        <span class="nav__logo-sub">Tomasz Bochenek</span>
+      </a>
+      <nav class="footer__links">
+        <a href="pages/regulamin.html">Regulamin</a>
+        <a href="pages/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="https://www.instagram.com/hipnoterapiabochenek/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/48732137266" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2025 Hipnoterapia Bochenek — Tomasz Bochenek, Gdańsk</p>
+      <!-- TODO: Uzupełnij NIP i nazwę działalności, np.: NIP: XXXXXXXXXX | Tomasz Bochenek Hipnoterapia -->
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

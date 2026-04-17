@@ -1,0 +1,68 @@
+:root {
+  /* Brand — Deep Forest */
+  --brand: #2d3b2d;
+  --brand-light: #3d4f3d;
+  --brand-dark: #1e281e;
+  --brand-subtle: rgba(45, 59, 45, 0.06);
+
+  /* Accent — Warm Coffee */
+  --accent: #8b7355;
+  --accent-light: #c9b896;
+  --accent-dark: #6e5a40;
+  --accent-subtle: rgba(139, 115, 85, 0.1);
+
+  /* Neutrals — Warm tones */
+  --neutral-900: #1a1a1a;
+  --neutral-800: #2d2d2d;
+  --neutral-700: #3d3d3d;
+  --neutral-600: #5c5c5c;
+  --neutral-500: #7a7a6e;
+  --neutral-400: #9a9a8e;
+  --neutral-300: #ccc8c0;
+  --neutral-200: #e8e2d8;
+  --neutral-100: #f2efe8;
+  --neutral-50: #f7f3ec;
+  --white: #fffdf9;
+
+  /* Typography */
+  --font-heading: 'Figtree', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-decorative: 'Figtree', sans-serif;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+  --space-2xl: 120px;
+  --space-3xl: 160px;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 12px rgba(45, 59, 45, 0.06), 0 1px 4px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 12px 40px rgba(45, 59, 45, 0.1), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 24px 60px rgba(45, 59, 45, 0.12), 0 8px 20px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 0 1px rgba(139, 115, 85, 0.15), 0 8px 30px rgba(139, 115, 85, 0.1);
+  --shadow-gold: 0 8px 30px rgba(139, 115, 85, 0.2);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow: 0.6s;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+  --header-height: 80px;
+  --header-height-shrunk: 64px;
+}

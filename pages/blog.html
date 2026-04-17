@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Hipnoterapia Bochenek</title>
+  <meta name="description" content="Blog o hipnoterapii, psychologii i rozwoju osobistym. Praktyczna wiedza na co dzień od certyfikowanego hipnoterapeuty.">
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo"><span class="nav__logo-main"><span class="nav__logo-main-wrap">Hipnoterapia Bochenek<span class="verified-badge" aria-label="Zweryfikowana firma" title="Zweryfikowana firma"></span></span></span><span class="nav__logo-sub">Tomasz Bochenek</span></a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__menu">
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../index.html#kontakt">Kontakt</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+      </ul>
+      <a href="umow-wizyte.html" class="btn btn--primary nav__cta">Umów wizytę</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label fade-in">Blog</span>
+      <h1 class="fade-in fade-in-delay-1">Psychologia, hipnoterapia i&nbsp;Ty</h1>
+      <p class="section-subtitle fade-in fade-in-delay-2">Artykuły oparte na&nbsp;badaniach naukowych i&nbsp;praktyce klinicznej. Wiedza, która pomaga zrozumieć siebie i&nbsp;wprowadzić trwałą zmianę.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED POST -->
+  <section class="blog-featured" style="position: relative; overflow: hidden;">
+    <div class="decor-circle decor-circle--gold" style="width: 180px; height: 180px; top: -50px; left: -70px;"></div>
+    <div class="decor-circle decor-circle--green" style="width: 120px; height: 120px; bottom: -30px; right: -50px;"></div>
+    <div class="container">
+      <article class="blog-featured__card fade-in">
+        <div class="blog-featured__image">
+          <img src="../assets/images/IMG_5600.JPEG" alt="Tomasz Bochenek — hipnoterapeuta" loading="lazy">
+        </div>
+        <div class="blog-featured__body">
+          <span class="blog-tag blog-tag--psychology">Psychologia</span>
+          <h2>Potrzeba przynależności: najsilniejsza siła w&nbsp;ludzkiej psychice</h2>
+          <p>Roy Baumeister udowodnił, że potrzeba bliskich relacji jest silniejsza niż seks czy agresja. Odrzucenie nie wywołuje smutku — ono wycisza emocje, obniża inteligencję i&nbsp;rozregulowuje samokontrole. Dowiedz się, jak to wpływa na Twoje codzienne życie.</p>
+          <div class="blog-featured__meta">
+            <time datetime="2026-04-15">15 kwietnia 2026</time>
+            <span>8 min czytania</span>
+          </div>
+          <a href="blog-potrzeba-przynaleznosci.html" class="btn btn--primary">Czytaj artykuł</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section style="padding: var(--space-lg) 0 0;">
+    <div class="container">
+      <div class="blog-tags fade-in">
+        <button class="blog-tag blog-tag--active" data-filter="all">Wszystkie</button>
+        <button class="blog-tag" data-filter="psychology">Psychologia</button>
+        <button class="blog-tag" data-filter="hypnotherapy">Hipnoterapia</button>
+        <button class="blog-tag" data-filter="selfdev">Rozwój osobisty</button>
+        <button class="blog-tag" data-filter="stress">Stres i&nbsp;emocje</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section style="position: relative; overflow: hidden; padding-top: var(--space-lg);">
+    <div class="decor-circle decor-circle--dot" style="width: 8px; height: 8px; top: 15%; right: 6%; animation-delay: 1s;"></div>
+    <div class="decor-circle decor-circle--dot" style="width: 6px; height: 6px; bottom: 20%; left: 4%; animation-delay: 3s;"></div>
+    <div class="container">
+      <div class="blog-grid blog-grid--3">
+
+        <!-- 1 -->
+        <article class="blog-card fade-in" data-category="psychology">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_7315.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--psychology">Psychologia</span>
+            <time datetime="2025-09-27">27 września 2025</time>
+            <h3>Pozytywne sposoby patrzenia na&nbsp;świat: jak je rozwijać?</h3>
+            <p>Wdzięczność, afirmacje i&nbsp;mindfulness — narzędzia, które zmieniają perspektywę i&nbsp;poprawiają jakość życia.</p>
+            <a href="blog-pozytywne-sposoby.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="blog-card fade-in" data-category="hypnotherapy">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_6575.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--hypnotherapy">Hipnoterapia</span>
+            <time datetime="2025-09-26">26 września 2025</time>
+            <h3>Hipnoterapia i&nbsp;jej najbardziej przebadane zastosowania</h3>
+            <p>Od lęków przez ból chroniczny po uzależnienia — co mówi nauka o&nbsp;skuteczności hipnozy.</p>
+            <a href="blog-hipnoterapia-zastosowania.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="blog-card fade-in" data-category="psychology">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_6306.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--psychology">Psychologia</span>
+            <time datetime="2026-04-10">10 kwietnia 2026</time>
+            <h3>Dlaczego odrzucenie boli jak rana fizyczna?</h3>
+            <p>Badania Pankseppa pokazują, że ból społeczny aktywuje te same ośrodki w&nbsp;mózgu co złamana kość. Co z&nbsp;tego wynika?</p>
+            <a href="blog-odrzucenie-bol.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="blog-card fade-in" data-category="stress">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_6386.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--stress">Stres i&nbsp;emocje</span>
+            <time datetime="2026-04-08">8 kwietnia 2026</time>
+            <h3>Samoregulacja: dlaczego tracisz kontrolę i&nbsp;jak ją odzyskać</h3>
+            <p>Mechanizm „ukrytego kontraktu" — Twoja samokontrola zależy od poczucia przynależności. Badania Baumeistera.</p>
+            <a href="blog-samoregulacja.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="blog-card fade-in" data-category="hypnotherapy">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_6656.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--hypnotherapy">Hipnoterapia</span>
+            <time datetime="2026-03-28">28 marca 2026</time>
+            <h3>Czym naprawdę jest trans hipnotyczny?</h3>
+            <p>Nie tracisz kontroli, nie śpisz, nie robisz rzeczy wbrew woli. Naukowe wyjaśnienie stanu hipnozy.</p>
+            <a href="blog-trans-hipnotyczny.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="blog-card fade-in" data-category="selfdev">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_7061.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--selfdev">Rozwój osobisty</span>
+            <time datetime="2026-03-21">21 marca 2026</time>
+            <h3>Syndrom oszusta: skąd się bierze i&nbsp;jak go pokonać</h3>
+            <p>70% ludzi doświadcza syndromu oszusta. Hipnoterapia pomaga dotrzeć do źródła — ograniczających przekonań z&nbsp;dzieciństwa.</p>
+            <a href="blog-syndrom-oszusta.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="blog-card fade-in" data-category="psychology">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_7109.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--psychology">Psychologia</span>
+            <time datetime="2026-03-14">14 marca 2026</time>
+            <h3>Samotność jako epidemia: co mówi psychologia?</h3>
+            <p>Samotność zwiększa śmiertelność bardziej niż otyłość. Dlaczego mózg traktuje izolację jak zagrożenie życia?</p>
+            <a href="blog-samotnosc-epidemia.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="blog-card fade-in" data-category="stress">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_7561.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--stress">Stres i&nbsp;emocje</span>
+            <time datetime="2026-03-07">7 marca 2026</time>
+            <h3>5 technik autohipnozy na stres, które zastosujesz dziś</h3>
+            <p>Proste ćwiczenia oddechowe i&nbsp;wizualizacje, które obniżają kortyzol w&nbsp;ciągu 10 minut. Bez doświadczenia.</p>
+            <a href="blog-autohipnoza-stres.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="blog-card fade-in" data-category="hypnotherapy">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_7720.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--hypnotherapy">Hipnoterapia</span>
+            <time datetime="2026-02-28">28 lutego 2026</time>
+            <h3>Hipnoterapia a&nbsp;lęk przed lataniem — jak działa?</h3>
+            <p>Fobie to wzorce podświadomości. Hipnoterapia je zmienia u&nbsp;źródła — bez ekspozycji, bez lat terapii.</p>
+            <a href="blog-lek-latanie.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="blog-card fade-in" data-category="psychology">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_7804.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--psychology">Psychologia</span>
+            <time datetime="2026-02-20">20 lutego 2026</time>
+            <h3>Agresja po odrzuceniu: dlaczego ranimy tych, którzy nas nie skrzywdzili</h3>
+            <p>Badania nad wykluczeniem społecznym pokazują paradoks — odrzuceni ludzie stają się bardziej agresywni, nawet wobec niewinnych.</p>
+            <a href="blog-agresja-odrzucenie.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 11 -->
+        <article class="blog-card fade-in" data-category="selfdev">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_8006.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--selfdev">Rozwój osobisty</span>
+            <time datetime="2026-02-14">14 lutego 2026</time>
+            <h3>Jak budować relacje, które naprawdę leczą</h3>
+            <p>Kontakt + troska = przynależność. Dlaczego potrzebujesz obu elementów i&nbsp;jak je świadomie rozwijać.</p>
+            <a href="blog-relacje-leczace.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 12 -->
+        <article class="blog-card fade-in" data-category="hypnotherapy">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_8020.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--hypnotherapy">Hipnoterapia</span>
+            <time datetime="2026-02-07">7 lutego 2026</time>
+            <h3>Rzucanie palenia z&nbsp;hipnoterapią: mity i&nbsp;fakty</h3>
+            <p>Jedna sesja nie wystarczy? A może wystarczy? Co mówią badania i&nbsp;czego uczy moja praktyka kliniczna.</p>
+            <a href="blog-rzucanie-palenia.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 13 -->
+        <article class="blog-card fade-in" data-category="stress">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/GOPR9621.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--stress">Stres i&nbsp;emocje</span>
+            <time datetime="2026-01-30">30 stycznia 2026</time>
+            <h3>Bezsenność: co naprawdę nie daje Ci spać</h3>
+            <p>Problem nie jest w&nbsp;łóżku — jest w&nbsp;podświadomości. Jak hipnoterapia przerywa błędne koło bezsenności.</p>
+            <a href="blog-bezsennosc.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 14 -->
+        <article class="blog-card fade-in" data-category="psychology">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/2F81682D-203B-4B54-8AF5-6DFE5E9E3C0D.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--psychology">Psychologia</span>
+            <time datetime="2026-01-22">22 stycznia 2026</time>
+            <h3>Emocjonalne znieczulenie: kiedy przestajesz czuć</h3>
+            <p>Po traumie lub odrzuceniu system emocjonalny się „wyłącza". To mechanizm obronny — ale ma swoją cenę.</p>
+            <a href="blog-emocjonalne-znieczulenie.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 15 -->
+        <article class="blog-card fade-in" data-category="selfdev">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_5600.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--selfdev">Rozwój osobisty</span>
+            <time datetime="2026-01-15">15 stycznia 2026</time>
+            <h3>Siła woli to mit: jak naprawdę działają nawyki</h3>
+            <p>Nie potrzebujesz więcej dyscypliny — potrzebujesz zmiany na poziomie podświadomości. Neuroplastyczność w&nbsp;praktyce.</p>
+            <a href="blog-sila-woli-nawyki.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+        <!-- 16 -->
+        <article class="blog-card fade-in" data-category="hypnotherapy">
+          <div class="blog-card__image">
+            <img src="../assets/images/blog/IMG_6575.JPEG" alt="" loading="lazy">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-tag blog-tag--hypnotherapy">Hipnoterapia</span>
+            <time datetime="2026-01-08">8 stycznia 2026</time>
+            <h3>Hipnoterapia sportowa: mentalny trening mistrzów</h3>
+            <p>Jak sportowcy i&nbsp;liderzy biznesu wykorzystują hipnozę do eliminacji blokad mentalnych i&nbsp;osiągania peak performance.</p>
+            <a href="blog-hipnoterapia-sportowa.html" class="blog-card__link">Czytaj więcej</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container fade-in">
+      <p>Chcesz doświadczyć hipnoterapii na własnej skórze?</p>
+      <a href="umow-wizyte.html" class="btn btn--primary btn--lg">Umów darmową konsultację</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__layout">
+      <a href="../index.html" class="footer__logo"><span class="nav__logo-main"><span class="nav__logo-main-wrap">Hipnoterapia Bochenek<span class="verified-badge" aria-label="Zweryfikowana firma" title="Zweryfikowana firma"></span></span></span><span class="nav__logo-sub">Tomasz Bochenek</span></a>
+      <nav class="footer__links">
+        <a href="regulamin.html">Regulamin</a>
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="https://www.instagram.com/hipnoterapiabochenek/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/48732137266" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2025 Hipnoterapia Bochenek &mdash; Tomasz Bochenek, Gdańsk</p>
+    </div>
+  </footer>
+  <script src="../scripts/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Umów wizytę — Hipnoterapia Bochenek</title>
+  <meta name="description" content="Umów darmową konsultację hipnoterapii. Sesje stacjonarnie w Gdańsku i online. 100% gwarancja satysfakcji.">
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo"><span class="nav__logo-main"><span class="nav__logo-main-wrap">Hipnoterapia Bochenek<span class="verified-badge" aria-label="Zweryfikowana firma" title="Zweryfikowana firma"></span></span></span><span class="nav__logo-sub">Tomasz Bochenek</span></a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__menu">
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../index.html#kontakt">Kontakt</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <a href="umow-wizyte.html" class="btn btn--primary nav__cta" aria-current="page">Umów wizytę</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label fade-in">Umów wizytę</span>
+      <h1 class="fade-in fade-in-delay-1">Zacznij od rozmowy</h1>
+      <p class="section-subtitle fade-in fade-in-delay-2">30 minut darmowej konsultacji. Opowiedz o&nbsp;swoich potrzebach — dowiesz się, jak mogę Ci pomóc. Zero zobowiązań.</p>
+    </div>
+  </section>
+
+  <section style="position: relative; overflow: hidden;">
+    <div class="decor-circle decor-circle--gold" style="width: 200px; height: 200px; top: -60px; right: -80px;"></div>
+    <div class="decor-circle decor-circle--green" style="width: 130px; height: 130px; bottom: 40px; left: -50px;"></div>
+    <div class="decor-circle decor-circle--dot" style="width: 8px; height: 8px; top: 20%; left: 8%;"></div>
+    <div class="container booking-layout">
+      <div class="fade-in">
+        <span class="section-label">Dlaczego warto</span>
+        <h2>Co zyskujesz?</h2>
+        <ul class="booking-benefits">
+          <li>Głęboką pewność siebie opartą na miłości własnej i&nbsp;zaufaniu</li>
+          <li>Wolność od lęków, fobii i&nbsp;szkodliwych wzorców</li>
+          <li>Lekkość — przepracowane emocje, zamrożone wspomnienia</li>
+          <li>Spokojny, głęboki sen i&nbsp;redukcję codziennego stresu</li>
+          <li>Konkretne narzędzia do pracy nad sobą w&nbsp;domu</li>
+          <li>Wsparcie między sesjami — nie zostajesz sam</li>
+        </ul>
+
+      </div>
+
+      <div class="booking-form fade-in fade-in-delay-1">
+        <h2>Zarezerwuj termin</h2>
+        <form action="mailto:hipnoterapiabochenek@gmail.com" method="POST" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Imię *</label>
+            <input type="text" id="name" name="name" required placeholder="Twoje imię">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+48 ___ ___ ___" pattern="[0-9+\s()-]{9,}">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="twoj@email.com (opcjonalnie)">
+          </div>
+          <div class="form-group">
+            <label for="visit-type">Rodzaj wizyty *</label>
+            <select id="visit-type" name="visit-type" required>
+              <option value="" disabled selected>Wybierz rodzaj wizyty</option>
+              <option value="konsultacja">Darmowa konsultacja (15–30 min)</option>
+              <option value="sesja">Sesja hipnoterapii (750 zł)</option>
+              <option value="pakiet">Pakiet Transformacji — 3 sesje (2000 zł)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Krótko o&nbsp;problemie</label>
+            <textarea id="message" name="message" placeholder="Opisz krótko, w czym mogę Ci pomóc..."></textarea>
+          </div>
+          <div class="form-group form-group--consent">
+            <label>
+              <input type="checkbox" id="rodo" name="rodo" required>
+              <span>Wyrażam zgodę na przetwarzanie moich danych osobowych (imię, telefon, email) w&nbsp;celu umówienia wizyty i&nbsp;kontaktu w&nbsp;sprawie hipnoterapii, zgodnie z&nbsp;<a href="polityka-prywatnosci.html">polityką prywatności</a>. *</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Wyślij zgłoszenie</button>
+          <p class="form-note">* pola wymagane. Odpowiadam w&nbsp;ciągu 24&nbsp;godzin.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="guarantee">
+    <div class="container">
+      <div class="guarantee__inner fade-in">
+        <div class="guarantee__icon" aria-hidden="true">&#9733;</div>
+        <h3>100% gwarancja satysfakcji</h3>
+        <p>Jeśli po pierwszej sesji nie poczujesz, że hipnoterapia jest dla Ciebie — pełny zwrot środków. Ryzykuję ja, nie Ty.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container fade-in">
+      <p>Wolisz porozmawiać? Zadzwoń — odpowiem na każde pytanie.</p>
+      <a href="tel:+48732137266" class="btn btn--primary btn--lg">Zadzwoń: +48 732 137 266</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__layout">
+      <a href="../index.html" class="footer__logo"><span class="nav__logo-main"><span class="nav__logo-main-wrap">Hipnoterapia Bochenek<span class="verified-badge" aria-label="Zweryfikowana firma" title="Zweryfikowana firma"></span></span></span><span class="nav__logo-sub">Tomasz Bochenek</span></a>
+      <nav class="footer__links">
+        <a href="regulamin.html">Regulamin</a>
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="https://www.instagram.com/hipnoterapiabochenek/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/48732137266" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2025 Hipnoterapia Bochenek &mdash; Tomasz Bochenek, Gdańsk</p>
+    </div>
+  </footer>
+  <script src="../scripts/main.js" defer></script>
+</body>
+</html>
