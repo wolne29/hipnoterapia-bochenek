@@ -1,7 +1,3 @@
-/
-├── index.html
-├── sitemap.xml        ← plik 1
-├── robots.txt         ← plik 2
-├── pages/
-│   └── oferta.html
-└── assets/
+User-agent: *
+Allow: /
+Sitemap: https://hipnoterapiabochenek.pl/sitemap.xml
