@@ -234,3 +234,82 @@ document.querySelectorAll('.faq__item').forEach((item) => {
     });
   });
 })();
+
+/* Contact forms — AJAX submit (FormSubmit) z loading / success / error */
+(function initContactForms() {
+  var forms = document.querySelectorAll('form[data-contact-form]');
+  if (!forms.length) return;
+
+  function showSuccess(form) {
+    var wrap = document.createElement('div');
+    wrap.className = 'form-success';
+    wrap.setAttribute('role', 'status');
+    wrap.setAttribute('aria-live', 'polite');
+    wrap.innerHTML =
+      '<div class="form-success__icon" aria-hidden="true">&#10003;</div>' +
+      '<h3>Dziękuję, wiadomość wysłana.</h3>' +
+      '<p>Odezwę się do Ciebie w ciągu 24 godzin — zwykle szybciej. Sprawdź też folder <em>Spam</em>, na wszelki wypadek.</p>' +
+      '<p class="form-success__actions">' +
+        'Wolisz od razu? <a href="tel:+48732137266">Zadzwoń: +48 732 137 266</a> · ' +
+        '<a href="https://wa.me/48732137266" target="_blank" rel="noopener">Napisz na WhatsApp</a>' +
+      '</p>';
+    form.replaceWith(wrap);
+    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function showError(form, btn, originalLabel) {
+    var existing = form.querySelector('.form-error');
+    if (existing) existing.remove();
+    var err = document.createElement('div');
+    err.className = 'form-error';
+    err.setAttribute('role', 'alert');
+    err.innerHTML =
+      '<strong>Ups — wiadomość nie dotarła.</strong> ' +
+      'Spróbuj ponownie albo skontaktuj się bezpośrednio: ' +
+      '<a href="tel:+48732137266">+48 732 137 266</a> lub ' +
+      '<a href="https://wa.me/48732137266" target="_blank" rel="noopener">WhatsApp</a>.';
+    btn.parentNode.insertBefore(err, btn);
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+  }
+
+  forms.forEach(function(form) {
+    var btn = form.querySelector('button[type="submit"]');
+    if (!btn) return;
+    var originalLabel = btn.textContent;
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      var honey = form.querySelector('input[name="_honey"]');
+      if (honey && honey.value) return;
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      var prevErr = form.querySelector('.form-error');
+      if (prevErr) prevErr.remove();
+
+      btn.disabled = true;
+      btn.textContent = 'Wysyłanie…';
+
+      try {
+        var response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        var data = await response.json().catch(function() { return {}; });
+        if (response.ok && (data.success === 'true' || data.success === true)) {
+          showSuccess(form);
+        } else {
+          throw new Error(data.message || 'Submit failed');
+        }
+      } catch (err) {
+        showError(form, btn, originalLabel);
+      }
+    });
+  });
+})();

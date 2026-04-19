@@ -417,7 +417,12 @@
       </div>
 
       <div class="booking-form fade-in" style="margin-top: var(--space-xl);">
-        <form action="mailto:hipnoterapiabochenek@gmail.com" method="POST" enctype="text/plain">
+        <form data-contact-form action="https://formsubmit.co/ajax/hipnoterapiabochenek@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nowe zgłoszenie: Oferta / Darmowa konsultacja — hipnoterapiabochenek.pl">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://hipnoterapiabochenek.pl/pages/dziekujemy.html">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true">
           <div class="form-group">
             <label for="name">Imię *</label>
             <input type="text" id="name" name="name" required placeholder="Twoje imię">
