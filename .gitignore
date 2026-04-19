@@ -1,0 +1,26 @@
+# System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+*.log
+*~
+*.swp
+*.swo
+
+# Cache
+.cache/
+
+# Backup files
+*.bak
+*.tmp
+*.zip
