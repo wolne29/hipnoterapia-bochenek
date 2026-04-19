@@ -37,3 +37,16 @@ v2.html
 
 # Image staging pool (processed → final locations before commit)
 assets/images/blog/pool-*/
+
+# Python
+__pycache__/
+*.pyc
+.claude/
+
+# Temporary test artifacts
+test.json
+test2.json
+test3.json
+or_models.json
+_images_new.txt
+blog_*.py
