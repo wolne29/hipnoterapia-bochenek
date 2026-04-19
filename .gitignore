@@ -24,3 +24,16 @@ Desktop.ini
 *.bak
 *.tmp
 *.zip
+
+# Internal tooling reports & notes (not part of the website)
+_hero_injection_report.csv
+_images_vision.json
+_images_vision_report.csv
+_scripts/
+CLAUDE.md
+index\ 3.html
+index\ —\ kopia.html
+v2.html
+
+# Image staging pool (processed → final locations before commit)
+assets/images/blog/pool-*/
