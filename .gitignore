@@ -37,6 +37,7 @@ v2.html
 
 # Image staging pool (processed → final locations before commit)
 assets/images/blog/pool-*/
+assets/images/_blog_backup_*/
 
 # Python
 __pycache__/

@@ -346,3 +346,22 @@ document.querySelectorAll('.faq__item').forEach((item) => {
     });
   });
 })();
+
+/* Blog category filter — obsługuje przyciski .blog-tag[data-filter] oraz karty .blog-card[data-category] */
+(function initBlogFilter() {
+  var tags = document.querySelectorAll('.blog-tag[data-filter]');
+  var cards = document.querySelectorAll('.blog-card[data-category]');
+  if (!tags.length || !cards.length) return;
+
+  tags.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tags.forEach(function (t) { t.classList.remove('blog-tag--active'); });
+      btn.classList.add('blog-tag--active');
+      var filter = btn.dataset.filter;
+      cards.forEach(function (card) {
+        var match = filter === 'all' || card.dataset.category === filter;
+        card.style.display = match ? '' : 'none';
+      });
+    });
+  });
+})();
