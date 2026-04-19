@@ -307,10 +307,16 @@ document.querySelectorAll('.faq__item').forEach((item) => {
       btn.textContent = 'Wysyłanie…';
 
       try {
+        var fd = new FormData(form);
+        var payload = {};
+        fd.forEach(function(value, key) { payload[key] = value; });
         var response = await fetch(form.action, {
           method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
+          body: JSON.stringify(payload),
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
         });
         var data = await response.json().catch(function() { return {}; });
         if (response.ok && (data.success === 'true' || data.success === true)) {
