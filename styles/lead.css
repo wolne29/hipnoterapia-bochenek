@@ -583,6 +583,12 @@
 .material-card__cover--oddech { background: linear-gradient(135deg, #5a7a8a 0%, #3d5866 100%); }
 .material-card__cover--neuro { background: linear-gradient(135deg, #3e5a80 0%, #2a4060 100%); }
 .material-card__cover--koszmary { background: linear-gradient(135deg, #1e281e 0%, #0d140d 100%); }
+.material-card__cover--mikro { background: linear-gradient(135deg, #6b5e40 0%, #4a4028 100%); }
+.material-card__cover--palenie { background: linear-gradient(135deg, #8b4040 0%, #5a2828 100%); }
+.material-card__cover--jedzenie { background: linear-gradient(135deg, #8b7355 0%, #6e5a40 100%); }
+.material-card__cover--latanie { background: linear-gradient(135deg, #5a8090 0%, #3d5866 100%); }
+.material-card__cover--krytyk { background: linear-gradient(135deg, #4a3d5a 0%, #2e2540 100%); }
+.material-card__cover--asertywnosc { background: linear-gradient(135deg, #3d6b3d 0%, #2d4f2d 100%); }
 
 .material-card__body {
   padding: var(--space-lg);

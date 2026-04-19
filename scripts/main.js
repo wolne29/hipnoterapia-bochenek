@@ -396,3 +396,36 @@ document.querySelectorAll('.faq__item').forEach((item) => {
     : 'all';
   apply(initialFilter);
 })();
+
+/* Materials category filter — [data-material-filter] + [data-material-category].
+   Prostsza wersja bez hash URL (materiały to landing, nie SEO targety). */
+(function initMaterialsFilter() {
+  var tags = document.querySelectorAll('[data-material-filter]');
+  var cards = document.querySelectorAll('[data-material-category]');
+  if (!tags.length || !cards.length) return;
+
+  var countEl = document.querySelector('[data-material-count]');
+
+  function apply(filter) {
+    var visible = 0;
+    cards.forEach(function (card) {
+      var match = filter === 'all' || card.dataset.materialCategory === filter;
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    tags.forEach(function (t) {
+      var active = t.dataset.materialFilter === filter;
+      t.classList.toggle('blog-tag--active', active);
+      t.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    if (countEl) countEl.textContent = visible;
+  }
+
+  tags.forEach(function (btn) {
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-pressed', btn.classList.contains('blog-tag--active') ? 'true' : 'false');
+    btn.addEventListener('click', function () {
+      apply(btn.dataset.materialFilter);
+    });
+  });
+})();
