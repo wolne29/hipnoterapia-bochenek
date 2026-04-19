@@ -29,19 +29,35 @@ if (header) {
 const fadeEls = document.querySelectorAll('.fade-in');
 
 if (fadeEls.length) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const supportsIO = 'IntersectionObserver' in window;
+
+  const revealAll = () => fadeEls.forEach((el) => el.classList.add('is-visible'));
+
+  if (reduceMotion || !supportsIO) {
+    revealAll();
+  } else {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: '0px 0px 10% 0px' }
+    );
+    fadeEls.forEach((el) => observer.observe(el));
+
+    window.setTimeout(() => {
+      fadeEls.forEach((el) => {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
         }
       });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-  );
-
-  fadeEls.forEach((el) => observer.observe(el));
+    }, 2500);
+  }
 }
 
 /* Quiz */

@@ -1069,6 +1069,13 @@ h3 {
   transform: translateY(0);
 }
 
+/* Fallback: gdy JS nie działa / użytkownik ma reduced motion, elementy są widoczne */
+.no-js .fade-in { opacity: 1; transform: none; transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+}
+
 .fade-in-delay-1 { transition-delay: 0.1s; }
 .fade-in-delay-2 { transition-delay: 0.2s; }
 .fade-in-delay-3 { transition-delay: 0.3s; }
