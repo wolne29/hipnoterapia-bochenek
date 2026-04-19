@@ -1,4 +1,4 @@
-@import url('tokens.css');
+/* tokens.css is linked separately in HTML <head> before main.css */
 
 /* === RESET === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,15 +24,17 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.015;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-size: 256px;
+@media (min-width: 768px) {
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.015;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -74,17 +76,20 @@ a:hover { color: var(--accent); }
 
 .decor-circle--gold {
   border: 1.5px solid rgba(139, 115, 85, 0.1);
-  animation: floatSlow 12s ease-in-out infinite;
 }
 
 .decor-circle--green {
   border: 1.5px solid rgba(45, 59, 45, 0.06);
-  animation: floatReverse 14s ease-in-out infinite;
 }
 
 .decor-circle--dot {
   background: rgba(139, 115, 85, 0.06);
-  animation: breathe 8s ease-in-out infinite;
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .decor-circle--gold  { animation: floatSlow 12s ease-in-out infinite; }
+  .decor-circle--green { animation: floatReverse 14s ease-in-out infinite; }
+  .decor-circle--dot   { animation: breathe 8s ease-in-out infinite; }
 }
 
 .decor-lotus {
@@ -1007,7 +1012,7 @@ h3 {
   background: var(--accent-subtle);
 }
 
-.walkthrough__step h4 {
+.walkthrough__step h3 {
   font-size: 0.95rem;
   margin-bottom: var(--space-xs);
   color: var(--brand);
@@ -2156,18 +2161,18 @@ h3 {
 }
 
 .footer__logo .nav__logo-main {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 1rem;
 }
 
 .footer__logo .nav__logo-sub {
-  color: var(--accent-light);
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.82);
+  opacity: 1;
   font-size: 0.62rem;
 }
 
 .footer__logo:hover .nav__logo-main {
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
 }
 
 .footer__logo img {
@@ -2188,22 +2193,22 @@ h3 {
 }
 
 .footer__links a {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.88rem;
   transition: color var(--duration-fast) var(--ease-out);
 }
 
-.footer__links a:hover { color: var(--accent-light); }
+.footer__links a:hover { color: #ffffff; }
 
 .footer__bottom {
   margin-top: var(--space-lg);
   padding-top: var(--space-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
 }
 
 .footer__bottom p {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 0.78rem;
 }
 

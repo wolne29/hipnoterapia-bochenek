@@ -235,6 +235,17 @@ document.querySelectorAll('.faq__item').forEach((item) => {
   });
 })();
 
+/* Blog cards — aria-label "Czytaj więcej" z tytułu posta (a11y: identyczne linki) */
+(function labelBlogCardLinks() {
+  document.querySelectorAll('.blog-card').forEach(function(card) {
+    var link = card.querySelector('.blog-card__link');
+    var title = card.querySelector('h2, h3, h4');
+    if (link && title && !link.hasAttribute('aria-label')) {
+      link.setAttribute('aria-label', 'Czytaj więcej: ' + title.textContent.trim());
+    }
+  });
+})();
+
 /* Contact forms — AJAX submit (FormSubmit) z loading / success / error */
 (function initContactForms() {
   var forms = document.querySelectorAll('form[data-contact-form]');

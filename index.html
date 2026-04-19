@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self'; connect-src 'self' https://formsubmit.co; frame-src https://www.google.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Hipnoterapia Bochenek — Twój klucz do wolności i spełnienia</title>
   <meta name="description" content="Sesje hipnoterapii stacjonarnie i online w Gdańsku. Certyfikowany hipnoterapeuta — pokonaj lęki, nawyki i stres. Darmowa konsultacja.">
 
@@ -112,6 +114,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="preload" as="image" href="assets/images/photo_2025-09-25_20-23-47-mfzqs6ab.jpg" fetchpriority="high">
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -141,7 +144,7 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero__bg">
-      <img src="assets/images/photo_2025-09-25_20-23-47-mfzqs6ab.jpg" alt="" loading="eager">
+      <img src="assets/images/photo_2025-09-25_20-23-47-mfzqs6ab.jpg" alt="" loading="eager" fetchpriority="high" width="1920" height="1080">
     </div>
     <div class="hero__content container">
       <h1 class="fade-in">Twój klucz do wolności i&nbsp;spełnienia</h1>
@@ -344,22 +347,22 @@
       <div class="walkthrough__grid">
         <div class="walkthrough__step fade-in fade-in-delay-1">
           <div class="walkthrough__icon" aria-hidden="true">&#128172;</div>
-          <h4>Rozmowa</h4>
+          <h3>Rozmowa</h3>
           <p>Omówimy Twoje cele i&nbsp;oczekiwania. Odpowiem na każde pytanie.</p>
         </div>
         <div class="walkthrough__step fade-in fade-in-delay-2">
           <div class="walkthrough__icon" aria-hidden="true">&#128524;</div>
-          <h4>Relaksacja</h4>
+          <h3>Relaksacja</h3>
           <p>Wprowadzę Cię w&nbsp;stan głębokiego spokoju. Jesteś świadomy przez cały czas.</p>
         </div>
         <div class="walkthrough__step fade-in fade-in-delay-3">
           <div class="walkthrough__icon" aria-hidden="true">&#10024;</div>
-          <h4>Praca z&nbsp;podświadomością</h4>
+          <h3>Praca z&nbsp;podświadomością</h3>
           <p>Dotrę do źródła problemu i&nbsp;wprowadzę pozytywne zmiany.</p>
         </div>
         <div class="walkthrough__step fade-in fade-in-delay-4">
           <div class="walkthrough__icon" aria-hidden="true">&#127793;</div>
-          <h4>Plan działania</h4>
+          <h3>Plan działania</h3>
           <p>Otrzymasz techniki do pracy w&nbsp;domu i&nbsp;konkretny plan następnych kroków.</p>
         </div>
       </div>
@@ -372,10 +375,10 @@
   <section class="gallery" id="galeria">
     <div class="container">
       <div class="gallery__grid fade-in" data-zoomable>
-        <img src="assets/images/photo_2025-09-25_19-26-02-mfzou2fe.jpg" alt="Gabinet hipnoterapii" loading="lazy">
-        <img src="assets/images/photo_2025-09-25_19-26-09-mfzou0du.jpg" alt="Gabinet hipnoterapii" loading="lazy">
-        <img src="assets/images/photo_2025-09-25_19-25-56-mfzou4de.jpg" alt="Gabinet hipnoterapii" loading="lazy">
-        <img src="assets/images/photo_2025-09-25_19-26-05-mfzotyf0.jpg" alt="Gabinet hipnoterapii" loading="lazy">
+        <img src="assets/images/photo_2025-09-25_19-26-02-mfzou2fe.jpg" alt="Gabinet hipnoterapii" loading="lazy" width="1280" height="885">
+        <img src="assets/images/photo_2025-09-25_19-26-09-mfzou0du.jpg" alt="Gabinet hipnoterapii" loading="lazy" width="1280" height="899">
+        <img src="assets/images/photo_2025-09-25_19-25-56-mfzou4de.jpg" alt="Gabinet hipnoterapii" loading="lazy" width="1280" height="880">
+        <img src="assets/images/photo_2025-09-25_19-26-05-mfzotyf0.jpg" alt="Gabinet hipnoterapii" loading="lazy" width="1280" height="885">
       </div>
     </div>
   </section>
@@ -398,11 +401,11 @@
     <div class="container about__layout">
       <div class="about__photos about__photos--trio fade-in">
         <div class="about__photo-main" data-zoomable>
-          <img src="assets/images/about-tomasz.jpg" alt="Tomasz Bochenek — hipnoterapeuta" loading="lazy">
+          <img src="assets/images/about-tomasz.jpg" alt="Tomasz Bochenek — hipnoterapeuta" loading="lazy" width="1482" height="2635">
         </div>
         <div class="about__photo-side">
-          <img src="assets/images/photo_2025-09-27_18-26-12-mg2hldnw-mg2hmhy5.jpg" alt="Certyfikaty hipnoterapii" loading="lazy" data-zoomable>
-          <img src="assets/images/photo_2025-09-27_18-26-09-mg2hgikn.jpg" alt="Certyfikaty hipnoterapii" loading="lazy" data-zoomable>
+          <img src="assets/images/photo_2025-09-27_18-26-12-mg2hldnw-mg2hmhy5.jpg" alt="Certyfikaty hipnoterapii" loading="lazy" data-zoomable width="888" height="1135">
+          <img src="assets/images/photo_2025-09-27_18-26-09-mg2hgikn.jpg" alt="Certyfikaty hipnoterapii" loading="lazy" data-zoomable width="590" height="1280">
         </div>
       </div>
       <div class="about__text fade-in fade-in-delay-1">
@@ -459,7 +462,7 @@
       <div class="blog-preview__grid">
         <article class="blog-card fade-in fade-in-delay-1">
           <div class="blog-card__image">
-            <img src="assets/images/blog/hipnoterapia-nauka.jpg" alt="" loading="lazy">
+            <img src="assets/images/blog/hipnoterapia-nauka.jpg" alt="" loading="lazy" width="4640" height="2610">
           </div>
           <div class="blog-card__body">
             <span class="blog-tag blog-tag--hypnotherapy" style="font-size:0.72rem;padding:4px 10px;">Hipnoterapia</span>
@@ -471,7 +474,7 @@
         </article>
         <article class="blog-card fade-in fade-in-delay-2">
           <div class="blog-card__image">
-            <img src="assets/images/blog/IMG_6656.JPEG" alt="" loading="lazy">
+            <img src="assets/images/blog/IMG_6656.JPEG" alt="" loading="lazy" width="1536" height="2048">
           </div>
           <div class="blog-card__body">
             <span class="blog-tag blog-tag--hypnotherapy" style="font-size:0.72rem;padding:4px 10px;">Hipnoterapia</span>
@@ -483,7 +486,7 @@
         </article>
         <article class="blog-card fade-in fade-in-delay-3">
           <div class="blog-card__image">
-            <img src="assets/images/blog/IMG_7315.JPEG" alt="" loading="lazy">
+            <img src="assets/images/blog/IMG_7315.JPEG" alt="" loading="lazy" width="1536" height="2048">
           </div>
           <div class="blog-card__body">
             <span class="blog-tag blog-tag--psychology" style="font-size:0.72rem;padding:4px 10px;">Psychologia</span>
