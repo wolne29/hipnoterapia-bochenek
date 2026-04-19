@@ -1,0 +1,7 @@
+/
+├── index.html
+├── sitemap.xml        ← plik 1
+├── robots.txt         ← plik 2
+├── pages/
+│   └── oferta.html
+└── assets/
