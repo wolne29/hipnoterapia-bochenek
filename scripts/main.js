@@ -347,21 +347,52 @@ document.querySelectorAll('.faq__item').forEach((item) => {
   });
 })();
 
-/* Blog category filter — obsługuje przyciski .blog-tag[data-filter] oraz karty .blog-card[data-category] */
+/* Blog category filter — przyciski .blog-tag[data-filter] + karty .blog-card[data-category].
+   Bonus: licznik wpisów, aria-pressed, hash URL (np. /pages/blog.html#neuroscience), "Brak wpisów" placeholder. */
 (function initBlogFilter() {
   var tags = document.querySelectorAll('.blog-tag[data-filter]');
   var cards = document.querySelectorAll('.blog-card[data-category]');
   if (!tags.length || !cards.length) return;
 
+  var countEl = document.querySelector('[data-filter-count]');
+  var grid = cards[0].parentElement;
+  var emptyMsg = document.createElement('p');
+  emptyMsg.className = 'blog-empty';
+  emptyMsg.style.cssText = 'grid-column:1/-1;text-align:center;padding:2rem;color:var(--neutral-500);';
+  emptyMsg.textContent = 'Brak wpisów w tej kategorii — kliknij "Wszystkie", żeby je przywrócić.';
+  emptyMsg.hidden = true;
+  if (grid) grid.appendChild(emptyMsg);
+
+  function apply(filter) {
+    var visible = 0;
+    cards.forEach(function (card) {
+      var match = filter === 'all' || card.dataset.category === filter;
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    tags.forEach(function (t) {
+      var active = t.dataset.filter === filter;
+      t.classList.toggle('blog-tag--active', active);
+      t.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    if (countEl) countEl.textContent = visible;
+    emptyMsg.hidden = visible > 0;
+  }
+
   tags.forEach(function (btn) {
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-pressed', btn.classList.contains('blog-tag--active') ? 'true' : 'false');
     btn.addEventListener('click', function () {
-      tags.forEach(function (t) { t.classList.remove('blog-tag--active'); });
-      btn.classList.add('blog-tag--active');
-      var filter = btn.dataset.filter;
-      cards.forEach(function (card) {
-        var match = filter === 'all' || card.dataset.category === filter;
-        card.style.display = match ? '' : 'none';
-      });
+      var f = btn.dataset.filter;
+      apply(f);
+      var newHash = f === 'all' ? ' ' : '#' + f;
+      history.replaceState(null, '', newHash);
     });
   });
+
+  var initialHash = (window.location.hash || '').replace('#', '');
+  var initialFilter = Array.prototype.some.call(tags, function (t) { return t.dataset.filter === initialHash; })
+    ? initialHash
+    : 'all';
+  apply(initialFilter);
 })();

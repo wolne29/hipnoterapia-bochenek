@@ -1938,10 +1938,36 @@ h3 {
   border-color: rgba(80, 120, 80, 0.15);
 }
 
-.blog-tag--stress {
+.blog-tag--stress,
+.blog-tag--emotions {
   background: rgba(120, 90, 60, 0.08);
   color: #6e5a40;
   border-color: rgba(120, 90, 60, 0.15);
+}
+
+.blog-tag--neuroscience,
+.blog-tag--neuroplastyczność {
+  background: rgba(70, 95, 130, 0.08);
+  color: #3e5a80;
+  border-color: rgba(70, 95, 130, 0.18);
+}
+
+.blog-tag--sleep {
+  background: rgba(95, 80, 140, 0.08);
+  color: #554a82;
+  border-color: rgba(95, 80, 140, 0.18);
+}
+
+.blog-tag--philosophy {
+  background: rgba(120, 105, 75, 0.08);
+  color: #6b5e40;
+  border-color: rgba(120, 105, 75, 0.18);
+}
+
+.blog-tag--relationships {
+  background: rgba(155, 85, 95, 0.08);
+  color: #7a4851;
+  border-color: rgba(155, 85, 95, 0.18);
 }
 
 .blog-grid--3 {
