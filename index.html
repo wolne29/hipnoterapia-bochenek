@@ -241,9 +241,43 @@
         <div class="about__photo-main" data-zoomable>
           <img src="assets/images/about-tomasz.jpg" alt="Tomasz Bochenek — hipnoterapeuta" loading="lazy" width="1482" height="2635">
         </div>
-        <div class="about__photo-side">
-          <img src="assets/images/photo_2025-09-27_18-26-12-mg2hldnw-mg2hmhy5.jpg" alt="Certyfikaty hipnoterapii" loading="lazy" data-zoomable width="888" height="1135">
-          <img src="assets/images/photo_2025-09-27_18-26-09-mg2hgikn.jpg" alt="Certyfikaty hipnoterapii" loading="lazy" data-zoomable width="590" height="1280">
+        <div class="homepage-certs" style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px;">
+          <div class="cred-card-home" style="background:#fff;border:1px solid rgba(139,115,85,0.16);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(45,59,45,0.06);transition:all 0.3s ease;">
+            <div style="background:#f7f3ec;padding:8px;border-bottom:1px solid rgba(139,115,85,0.10);">
+              <img src="assets/images/photo_2025-09-25_19-25-56-mfzou4de.jpg" alt="Certyfikat Hipnoza Konwersacyjna" loading="lazy" data-zoomable style="width:100%;display:block;border-radius:6px;aspect-ratio:1/1.35;object-fit:cover;cursor:zoom-in;">
+            </div>
+            <div style="padding:11px 13px;background:#1B3A2F;color:#fffdf9;">
+              <div style="font-size:12.5px;font-weight:600;line-height:1.3;">Hipnoza Konwersacyjna</div>
+              <div style="font-size:10.5px;opacity:0.7;margin-top:3px;letter-spacing:0.3px;">Październik 2024</div>
+            </div>
+          </div>
+          <div class="cred-card-home" style="background:#fff;border:1px solid rgba(139,115,85,0.16);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(45,59,45,0.06);transition:all 0.3s ease;">
+            <div style="background:#f7f3ec;padding:8px;border-bottom:1px solid rgba(139,115,85,0.10);">
+              <img src="assets/images/photo_2025-09-25_19-26-09-mfzou0du.jpg" alt="Certyfikat Trener Autohipnozy" loading="lazy" data-zoomable style="width:100%;display:block;border-radius:6px;aspect-ratio:1/1.35;object-fit:cover;cursor:zoom-in;">
+            </div>
+            <div style="padding:11px 13px;background:#1B3A2F;color:#fffdf9;">
+              <div style="font-size:12.5px;font-weight:600;line-height:1.3;">Trener Autohipnozy</div>
+              <div style="font-size:10.5px;opacity:0.7;margin-top:3px;letter-spacing:0.3px;">Listopad 2024</div>
+            </div>
+          </div>
+          <div class="cred-card-home" style="background:#fff;border:1px solid rgba(139,115,85,0.16);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(45,59,45,0.06);transition:all 0.3s ease;">
+            <div style="background:#f7f3ec;padding:8px;border-bottom:1px solid rgba(139,115,85,0.10);">
+              <img src="assets/images/photo_2025-09-25_19-26-05-mfzotyf0.jpg" alt="Certyfikat NLP w Hipnoterapii" loading="lazy" data-zoomable style="width:100%;display:block;border-radius:6px;aspect-ratio:1/1.35;object-fit:cover;cursor:zoom-in;">
+            </div>
+            <div style="padding:11px 13px;background:#1B3A2F;color:#fffdf9;">
+              <div style="font-size:12.5px;font-weight:600;line-height:1.3;">NLP w&nbsp;Hipnoterapii</div>
+              <div style="font-size:10.5px;opacity:0.7;margin-top:3px;letter-spacing:0.3px;">Listopad 2024</div>
+            </div>
+          </div>
+          <div class="cred-card-home" style="background:#fff;border:1px solid rgba(139,115,85,0.16);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(45,59,45,0.06);transition:all 0.3s ease;">
+            <div style="background:#f7f3ec;padding:8px;border-bottom:1px solid rgba(139,115,85,0.10);">
+              <img src="assets/images/photo_2025-09-25_19-26-02-mfzou2fe.jpg" alt="Certyfikat Kurs Hipnozy i Hipnoterapii" loading="lazy" data-zoomable style="width:100%;display:block;border-radius:6px;aspect-ratio:1/1.35;object-fit:cover;cursor:zoom-in;">
+            </div>
+            <div style="padding:11px 13px;background:#1B3A2F;color:#fffdf9;">
+              <div style="font-size:12.5px;font-weight:600;line-height:1.3;">Kurs Hipnozy i&nbsp;Hipnoterapii</div>
+              <div style="font-size:10.5px;opacity:0.7;margin-top:3px;letter-spacing:0.3px;">Grudzień 2024 ★</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="about__text fade-in fade-in-delay-1">
@@ -678,6 +712,13 @@
       border-color: rgba(201, 184, 150, 0.32) !important;
       transform: translateY(-3px);
     }
+    .cred-card-home:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(45, 59, 45, 0.12) !important;
+      border-color: rgba(139, 115, 85, 0.30) !important;
+    }
+    .cred-card-home:hover img { opacity: 0.92; }
+    .cred-card-home img { transition: opacity 0.3s ease; }
 
     /* === HERO SCROLL HINT === */
     .hero-scroll-hint {
