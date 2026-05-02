@@ -39,10 +39,24 @@
   </url>
   <url>
     <loc>https://hipnoterapiabochenek.pl/pages/blog.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- PILLAR POSTS — high priority SEO targets -->
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-leki-i-ataki-paniki-przewodnik.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-rzucanie-nawykow-neurobiologia.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-toksyczne-relacje-narcyzm.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-wypalenie-zawodowe-przewodnik.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-pierwsza-sesja-hipnoterapii.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-hipnoterapia-vs-psychoterapia.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-hipnoterapeuta-gdansk-letnica.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-ile-kosztuje-hipnoterapia-polska-2026.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- CLUSTER POSTS — long-tail SEO -->
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-budzenie-o-3-w-nocy-przyczyny.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hipnoterapiabochenek.pl/pages/blog-ataki-paniki-w-pracy-przed-prezentacja.html</loc><lastmod>2026-05-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <url>
     <loc>https://hipnoterapiabochenek.pl/pages/blog-agresja-odrzucenie.html</loc>
