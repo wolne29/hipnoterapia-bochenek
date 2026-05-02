@@ -261,14 +261,87 @@
     </div>
   </section>
 
-  <!-- GALERIA -->
-  <section class="gallery" id="galeria">
+  <!-- QUIZ — interaktywny test (przywrócony z update CTA do oferty) -->
+  <section class="quiz" id="quiz">
     <div class="container">
-      <div class="gallery__grid fade-in" data-zoomable>
-        <img src="assets/images/photo_2025-09-25_19-26-02-mfzou2fe.jpg" alt="Gabinet hipnoterapii" loading="lazy" width="1280" height="885">
-        <img src="assets/images/photo_2025-09-25_19-26-09-mfzou0du.jpg" alt="Gabinet hipnoterapii" loading="lazy" width="1280" height="899">
-        <img src="assets/images/photo_2025-09-25_19-25-56-mfzou4de.jpg" alt="Gabinet hipnoterapii" loading="lazy" width="1280" height="880">
-        <img src="assets/images/photo_2025-09-25_19-26-05-mfzotyf0.jpg" alt="Gabinet hipnoterapii" loading="lazy" width="1280" height="885">
+      <div class="quiz__card fade-in">
+        <div class="quiz__progress">
+          <div class="quiz__progress-bar" id="quizProgress"></div>
+        </div>
+
+        <!-- INTRO -->
+        <div class="quiz__step quiz__step--active" data-step="intro">
+          <span class="section-label">Test — 2 minuty</span>
+          <h2>Sprawdź, czy hipnoterapia jest dla Ciebie</h2>
+          <p class="quiz__desc">Odpowiedz na 5 krótkich pytań. Na końcu otrzymasz spersonalizowaną analizę i&nbsp;link do&nbsp;pełnej oferty z&nbsp;programem dopasowanym do&nbsp;Twojego problemu.</p>
+          <button class="btn btn--primary btn--lg quiz__next" type="button">Zaczynam</button>
+        </div>
+
+        <!-- Q1 -->
+        <div class="quiz__step" data-step="1">
+          <span class="quiz__counter">Pytanie 1 z 5</span>
+          <h3>Co najbardziej chciałbyś zmienić w&nbsp;swoim życiu?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-category="lek" type="button">Lęki i&nbsp;fobie</button>
+            <button class="quiz__option" data-category="nawyk" type="button">Rzucenie palenia · nawyki (objadanie się, alkohol)</button>
+            <button class="quiz__option" data-category="stres" type="button">Bezsenność, stres, wypalenie</button>
+            <button class="quiz__option" data-category="pewnosc" type="button">Pewność siebie · syndrom oszusta</button>
+            <button class="quiz__option" data-category="trauma" type="button">Uwalnianie zatrzymanych emocji</button>
+            <button class="quiz__option" data-category="rozwoj" type="button">Osiągnąć więcej w&nbsp;sporcie lub biznesie</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz__step" data-step="2">
+          <span class="quiz__counter">Pytanie 2 z 5</span>
+          <h3>Jak długo zmagasz się z&nbsp;tym problemem?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-score="1" type="button">Kilka tygodni</button>
+            <button class="quiz__option" data-score="2" type="button">Kilka miesięcy</button>
+            <button class="quiz__option" data-score="3" type="button">Ponad rok</button>
+            <button class="quiz__option" data-score="4" type="button">Wiele lat — nie pamiętam, kiedy się zaczęło</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz__step" data-step="3">
+          <span class="quiz__counter">Pytanie 3 z 5</span>
+          <h3>Czy próbowałeś już innych metod?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-score="1" type="button">Nie, to mój pierwszy krok</button>
+            <button class="quiz__option" data-score="2" type="button">Tak, ale bez trwałych efektów</button>
+            <button class="quiz__option" data-score="3" type="button">Tak, wiele razy — nic nie działa</button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz__step" data-step="4">
+          <span class="quiz__counter">Pytanie 4 z 5</span>
+          <h3>Jak bardzo ten problem wpływa na&nbsp;Twoje codzienne życie?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-score="1" type="button">Trochę mi&nbsp;przeszkadza</button>
+            <button class="quiz__option" data-score="2" type="button">Dość mocno — ogranicza mnie w&nbsp;wielu sytuacjach</button>
+            <button class="quiz__option" data-score="3" type="button">Bardzo — czuję, że&nbsp;to&nbsp;blokuje moje życie</button>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="quiz__step" data-step="5">
+          <span class="quiz__counter">Pytanie 5 z 5</span>
+          <h3>Jak szybko chciałbyś zobaczyć zmianę?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-score="1" type="button">Nie spieszę się — ważna jest jakość</button>
+            <button class="quiz__option" data-score="2" type="button">W&nbsp;ciągu kilku tygodni</button>
+            <button class="quiz__option" data-score="3" type="button">Jak najszybciej — jestem gotowy na&nbsp;zmianę</button>
+          </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="quiz__step" data-step="result">
+          <div class="quiz__result" id="quizResult">
+            <!-- filled by JS — końcowy guzik prowadzi do /pages/oferta.html -->
+          </div>
+        </div>
       </div>
     </div>
   </section>

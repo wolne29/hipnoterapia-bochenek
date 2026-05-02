@@ -145,7 +145,7 @@ if (fadeEls.length) {
         '<div class="quiz__stat"><span class="quiz__stat-value">0 zł</span><span class="quiz__stat-label">pierwsza konsultacja</span></div>' +
         '<div class="quiz__stat"><span class="quiz__stat-value">100%</span><span class="quiz__stat-label">gwarancja satysfakcji</span></div>' +
       '</div>' +
-      '<a href="pages/umow-wizyte.html" class="btn btn--primary btn--lg">Umów darmową konsultację</a>';
+      '<a href="pages/oferta.html" class="btn btn--primary btn--lg">Zobacz pełną ofertę z&nbsp;cennikiem &rarr;</a>';
 
     showStep('result');
   }
