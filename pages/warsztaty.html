@@ -463,6 +463,28 @@ footer p { margin-bottom: 8px; }
     .signup-steps { padding: 24px 20px; }
     .guarantee-box { flex-direction: column; text-align: center; padding: 24px; }
 }
+
+/* === FORMULARZ ZAPISU === */
+.form-wrap { max-width: 580px; margin: 0 auto; }
+.form-row { margin-bottom: 16px; }
+.form-row label { display: block; font-size: 14px; color: var(--ink); margin-bottom: 6px; font-weight: 500; }
+.form-row label .req { color: var(--coffee); font-weight: 700; }
+.form-row input, .form-row textarea {
+    width: 100%; padding: 12px 14px;
+    border: 1px solid var(--rule); border-radius: 8px;
+    font-family: inherit; font-size: 15px;
+    background: var(--paper); color: var(--ink);
+    transition: border-color var(--t); box-sizing: border-box;
+}
+.form-row input:focus, .form-row textarea:focus { outline: none; border-color: var(--gold); }
+.form-row textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
+.form-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.form-actions > * { flex: 1; min-width: 180px; cursor: pointer; }
+.form-help { font-size: 13px; color: var(--ink-soft); margin-top: 14px; line-height: 1.55; text-align: center; }
+@media (max-width: 600px) {
+    .form-actions { flex-direction: column; }
+    .form-actions > * { width: 100%; }
+}
 </style>
 <!-- Cookie consent + Meta Pixel (loaded after consent) -->
 <script src="../scripts/cookie-consent.js" defer></script>
@@ -688,7 +710,7 @@ footer p { margin-bottom: 8px; }
                     <li>Voucher absolwencki</li>
                     <li>Catering wliczony</li>
                 </ul>
-                <a href="mailto:hipnoterapiabochenek@gmail.com?subject=Weekend%20Solo%20-%20zapis&body=Dzie%C5%84%20dobry%2C%0A%0AChc%C4%99%20zapisa%C4%87%20si%C4%99%20na%20weekend%20Solo%20%281690%20z%C5%82%29.%0A%0AM%C3%B3j%20numer%20telefonu%3A%0AImi%C4%99%20i%20nazwisko%3A%0ANajlepsza%20pora%20kontaktu%3A%0A%0APozdrawiam" class="btn btn-ghost price-cta">Zapisz mnie</a>
+                <a href="#formularz" onclick="selectPackage('Solo (1690 zł)'); return true;" class="btn btn-ghost price-cta">Zapisz mnie</a>
             </div>
 
             <div class="price-card featured">
@@ -704,7 +726,7 @@ footer p { margin-bottom: 8px; }
                     <li>Idealnie dla par, rodziców, rodzeństwa</li>
                     <li>Catering wliczony</li>
                 </ul>
-                <a href="mailto:hipnoterapiabochenek@gmail.com?subject=Weekend%20z%20para%20-%20zapis&body=Dzie%C5%84%20dobry%2C%0A%0AChcemy%20zapisa%C4%87%20si%C4%99%20na%20weekend%20-%20pakiet%20Z%20par%C4%85%20%281490%20z%C5%82%20/%20osoba%29.%0A%0ANumer%20telefonu%20%28kontaktowy%29%3A%0AImiona%20i%20nazwiska%20%28oboje%29%3A%0ANajlepsza%20pora%20kontaktu%3A%0A%0APozdrawiam" class="btn btn-primary price-cta">Zapisz nas</a>
+                <a href="#formularz" onclick="selectPackage('Z parą (1490 zł / osoba)'); return true;" class="btn btn-primary price-cta">Zapisz nas</a>
             </div>
 
             <div class="price-card">
@@ -720,7 +742,7 @@ footer p { margin-bottom: 8px; }
                     <li>Email + telefon support</li>
                     <li><strong>Wartość ~4 440 zł</strong> w cenie 2 995 zł</li>
                 </ul>
-                <a href="mailto:hipnoterapiabochenek@gmail.com?subject=Weekend%20Premium%20-%20zapis&body=Dzie%C5%84%20dobry%2C%0A%0AChc%C4%99%20zapisa%C4%87%20si%C4%99%20na%20weekend%20Premium%20%28weekend%20%2B%203%20sesje%20%2B%20follow-up%2C%202995%20z%C5%82%29.%0A%0AM%C3%B3j%20numer%20telefonu%3A%0AImi%C4%99%20i%20nazwisko%3A%0ANajlepsza%20pora%20kontaktu%3A%0A%0APozdrawiam" class="btn btn-ghost price-cta">Zapisz mnie</a>
+                <a href="#formularz" onclick="selectPackage('Premium (2995 zł)'); return true;" class="btn btn-ghost price-cta">Zapisz mnie</a>
             </div>
         </div>
 
@@ -815,6 +837,40 @@ footer p { margin-bottom: 8px; }
     </div>
 </section>
 
+<!-- FORMULARZ ZAPISU -->
+<section id="formularz" class="section-cream">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">Zapisz się</span>
+            <h2 class="section-title">Zostaw <em>swoje dane</em>.</h2>
+            <p class="section-lead">W 30 sekund. Oddzwonię w 24h.</p>
+        </div>
+        <div class="form-wrap">
+            <div class="form-row">
+                <label for="f-name">Imię (lub imiona, jeśli z parą)</label>
+                <input type="text" id="f-name" placeholder="np. Anna" autocomplete="given-name">
+            </div>
+            <div class="form-row">
+                <label for="f-tel">Numer telefonu <span class="req">*</span></label>
+                <input type="tel" id="f-tel" placeholder="np. 500 123 456" autocomplete="tel">
+            </div>
+            <div class="form-row">
+                <label for="f-email">Email (opcjonalnie)</label>
+                <input type="email" id="f-email" placeholder="twoj@email.pl" autocomplete="email">
+            </div>
+            <div class="form-row">
+                <label for="f-msg">Treść wiadomości</label>
+                <textarea id="f-msg" placeholder="Wybrany pakiet, termin, pytania..."></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="button" onclick="sendForm('mail')" class="btn btn-primary">Wyślij mailem</button>
+                <button type="button" onclick="sendForm('whatsapp')" class="btn btn-ghost">Wyślij przez WhatsApp</button>
+            </div>
+            <p class="form-help">Mail otworzy Twojego klienta poczty. WhatsApp otworzy aplikację WhatsApp z gotową wiadomością. Wybierz co Ci wygodniej - obie opcje wysyłają tę samą treść.</p>
+        </div>
+    </div>
+</section>
+
 <!-- KONTAKT -->
 <section id="kontakt" class="section-paper">
     <div class="container">
@@ -863,6 +919,54 @@ footer p { margin-bottom: 8px; }
         </p>
     </div>
 </footer>
+
+<script>
+function selectPackage(pkg) {
+    var msg = document.getElementById('f-msg');
+    if (msg && !msg.value.includes('pakiet:')) {
+        msg.value = 'Interesuje mnie pakiet: ' + pkg + '\n\n';
+    }
+    setTimeout(function() {
+        if (msg) {
+            msg.focus();
+            var len = msg.value.length;
+            try { msg.setSelectionRange(len, len); } catch (e) {}
+        }
+    }, 700);
+}
+
+function sendForm(target) {
+    var name = (document.getElementById('f-name').value || '').trim();
+    var tel = (document.getElementById('f-tel').value || '').trim();
+    var email = (document.getElementById('f-email').value || '').trim();
+    var msg = (document.getElementById('f-msg').value || '').trim();
+
+    if (!tel) {
+        alert('Podaj numer telefonu - to jedyne pole wymagane, dzięki niemu mogę oddzwonić.');
+        document.getElementById('f-tel').focus();
+        return;
+    }
+
+    var lines = [];
+    if (name) lines.push('Imię: ' + name);
+    lines.push('Telefon: ' + tel);
+    if (email) lines.push('Email: ' + email);
+    if (msg) { lines.push(''); lines.push('Treść:'); lines.push(msg); }
+    lines.push('');
+    lines.push('Pozdrawiam');
+    var body = lines.join('\n');
+    var subject = 'Weekend warsztatów - zapis';
+
+    if (target === 'mail') {
+        var url = 'mailto:hipnoterapiabochenek@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        window.location.href = url;
+    } else if (target === 'whatsapp') {
+        var waText = 'Dzień dobry! Zapis na weekend warsztatów.\n\n' + body;
+        var waUrl = 'https://wa.me/48732137266?text=' + encodeURIComponent(waText);
+        window.open(waUrl, '_blank', 'noopener');
+    }
+}
+</script>
 
 </body>
 </html>
