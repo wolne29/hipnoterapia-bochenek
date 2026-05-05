@@ -481,6 +481,10 @@ footer p { margin-bottom: 8px; }
 .form-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
 .form-actions > * { flex: 1; min-width: 180px; cursor: pointer; }
 .form-help { font-size: 13px; color: var(--ink-soft); margin-top: 14px; line-height: 1.55; text-align: center; }
+.form-status { text-align: center; min-height: 22px; margin-top: 14px; font-size: 14.5px; font-weight: 600; }
+.form-status.ok { color: #2d7a4e; }
+.form-status.err { color: #c0392b; }
+.form-actions button[disabled] { opacity: 0.6; cursor: wait; }
 @media (max-width: 600px) {
     .form-actions { flex-direction: column; }
     .form-actions > * { width: 100%; }
@@ -863,10 +867,11 @@ footer p { margin-bottom: 8px; }
                 <textarea id="f-msg" placeholder="Wybrany pakiet, termin, pytania..."></textarea>
             </div>
             <div class="form-actions">
-                <button type="button" onclick="sendForm('gmail')" class="btn btn-primary">Wyślij przez Gmail</button>
+                <button type="button" data-send-btn onclick="sendForm('send')" class="btn btn-primary">Wyślij wiadomość</button>
                 <button type="button" onclick="sendForm('whatsapp')" class="btn btn-ghost">Wyślij przez WhatsApp</button>
             </div>
-            <p class="form-help">Gmail otwiera kompozer w nowej karcie (wymaga konta Google). WhatsApp otwiera aplikację z gotową wiadomością. Obie opcje wysyłają tę samą treść. <a href="#" onclick="sendForm('mailto'); return false;">Masz Outlook lub inny klient poczty? Kliknij tutaj.</a></p>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-help">Wiadomość trafia bezpośrednio na hipnoterapiabochenek@gmail.com. Oddzwonię w 24h. WhatsApp = aplikacja w telefonie / przeglądarce.</p>
         </div>
     </div>
 </section>
@@ -935,7 +940,7 @@ function selectPackage(pkg) {
     }, 700);
 }
 
-function sendForm(target) {
+async function sendForm(target) {
     var name = (document.getElementById('f-name').value || '').trim();
     var tel = (document.getElementById('f-tel').value || '').trim();
     var email = (document.getElementById('f-email').value || '').trim();
@@ -947,24 +952,52 @@ function sendForm(target) {
         return;
     }
 
-    var lines = [];
-    if (name) lines.push('Imię: ' + name);
-    lines.push('Telefon: ' + tel);
-    if (email) lines.push('Email: ' + email);
-    if (msg) { lines.push(''); lines.push('Treść:'); lines.push(msg); }
-    lines.push('');
-    lines.push('Pozdrawiam');
-    var body = lines.join('\n');
-    var subject = 'Weekend warsztatów - zapis';
+    if (target === 'send') {
+        var btn = document.querySelector('[data-send-btn]');
+        var status = document.getElementById('form-status');
+        var orig = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = 'Wysyłanie...';
+        status.textContent = '';
+        status.className = 'form-status';
 
-    if (target === 'gmail') {
-        var url = 'https://mail.google.com/mail/?view=cm&fs=1&to=hipnoterapiabochenek@gmail.com&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        window.open(url, '_blank', 'noopener');
-    } else if (target === 'mailto') {
-        var url = 'mailto:hipnoterapiabochenek@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        window.location.href = url;
+        try {
+            var response = await fetch('https://formsubmit.co/ajax/hipnoterapiabochenek@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    _subject: 'Weekend warsztatów - zapis',
+                    _captcha: 'false',
+                    _template: 'table',
+                    'Imie': name || '(nie podano)',
+                    'Telefon': tel,
+                    'Email kontaktowy': email || '(nie podano)',
+                    'Tresc wiadomosci': msg || '(brak)'
+                })
+            });
+            var data = await response.json();
+            if (data && (data.success === 'true' || data.success === true)) {
+                status.textContent = 'Wiadomość wysłana. Oddzwonię w 24h.';
+                status.className = 'form-status ok';
+                ['f-name','f-tel','f-email','f-msg'].forEach(function(id){ document.getElementById(id).value = ''; });
+            } else {
+                status.textContent = 'Coś poszło nie tak. Spróbuj przez WhatsApp lub zadzwoń: 732 137 266.';
+                status.className = 'form-status err';
+            }
+        } catch (e) {
+            status.textContent = 'Błąd wysyłki. Spróbuj przez WhatsApp lub zadzwoń: 732 137 266.';
+            status.className = 'form-status err';
+        }
+
+        btn.disabled = false;
+        btn.textContent = orig;
     } else if (target === 'whatsapp') {
-        var waText = 'Dzień dobry! Zapis na weekend warsztatów.\n\n' + body;
+        var lines = [];
+        if (name) lines.push('Imię: ' + name);
+        lines.push('Telefon: ' + tel);
+        if (email) lines.push('Email: ' + email);
+        if (msg) { lines.push(''); lines.push('Treść:'); lines.push(msg); }
+        var waText = 'Dzień dobry! Zapis na weekend warsztatów.\n\n' + lines.join('\n');
         var waUrl = 'https://wa.me/48732137266?text=' + encodeURIComponent(waText);
         window.open(waUrl, '_blank', 'noopener');
     }
