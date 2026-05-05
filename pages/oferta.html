@@ -5894,7 +5894,7 @@ function submitExitForm(e) {
             document.getElementById('exit-form').style.display = 'none';
             document.getElementById('exit-success').style.display = 'block';
             setTimeout(() => {
-                window.location.href = 'dziekuje.html?source=exit-popup';
+                window.location.href = 'dziekujemy.html?source=exit-popup';
             }, 1200);
         }).catch(() => {
             // Fallback do WhatsApp jeśli MailerLite zawiedzie
@@ -5974,7 +5974,7 @@ function handleFormSubmit(e) {
     .then(r => r.json())
     .then(d => {
         if (d && (d.success === 'true' || d.success === true)) {
-            window.location.href = 'dziekuje.html?source=form&type=konsultacja';
+            window.location.href = 'dziekujemy.html?source=form&type=konsultacja';
         } else {
             fallbackKonsultacjaWA(data);
         }
