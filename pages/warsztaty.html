@@ -863,10 +863,10 @@ footer p { margin-bottom: 8px; }
                 <textarea id="f-msg" placeholder="Wybrany pakiet, termin, pytania..."></textarea>
             </div>
             <div class="form-actions">
-                <button type="button" onclick="sendForm('mail')" class="btn btn-primary">Wyślij mailem</button>
+                <button type="button" onclick="sendForm('gmail')" class="btn btn-primary">Wyślij przez Gmail</button>
                 <button type="button" onclick="sendForm('whatsapp')" class="btn btn-ghost">Wyślij przez WhatsApp</button>
             </div>
-            <p class="form-help">Mail otworzy Twojego klienta poczty. WhatsApp otworzy aplikację WhatsApp z gotową wiadomością. Wybierz co Ci wygodniej - obie opcje wysyłają tę samą treść.</p>
+            <p class="form-help">Gmail otwiera kompozer w nowej karcie (wymaga konta Google). WhatsApp otwiera aplikację z gotową wiadomością. Obie opcje wysyłają tę samą treść. <a href="#" onclick="sendForm('mailto'); return false;">Masz Outlook lub inny klient poczty? Kliknij tutaj.</a></p>
         </div>
     </div>
 </section>
@@ -957,7 +957,10 @@ function sendForm(target) {
     var body = lines.join('\n');
     var subject = 'Weekend warsztatów - zapis';
 
-    if (target === 'mail') {
+    if (target === 'gmail') {
+        var url = 'https://mail.google.com/mail/?view=cm&fs=1&to=hipnoterapiabochenek@gmail.com&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        window.open(url, '_blank', 'noopener');
+    } else if (target === 'mailto') {
         var url = 'mailto:hipnoterapiabochenek@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         window.location.href = url;
     } else if (target === 'whatsapp') {
