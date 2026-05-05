@@ -5941,9 +5941,9 @@ document.addEventListener('keydown', (e) => {
 // === Formspree endpoint dla głównego formularza konsultacji ===
 // PODMIEŃ po setupie Formspree (patrz: lead_magnety/audio_sen/SETUP_MAILERLITE_FORMSPREE.md)
 // Format: 'https://formspree.io/f/xyzpqr123'
-const FORMSPREE_KONSULTACJA_ENDPOINT = ''; // ← wstaw URL po setupie
+// (Formsubmit AJAX - bezposrednia wysylka maila bez konfiguracji endpointa)
 
-// Form submission - Formspree primary, WhatsApp fallback
+// Form submission - Formsubmit AJAX primary, WhatsApp fallback przy bledzie
 function handleFormSubmit(e) {
     e.preventDefault();
     const f = e.target;
@@ -5954,23 +5954,34 @@ function handleFormSubmit(e) {
         problem: f.problem.value
     };
 
-    if (FORMSPREE_KONSULTACJA_ENDPOINT) {
-        // PRODUKCJA: wyślij do Formspree
-        fetch(FORMSPREE_KONSULTACJA_ENDPOINT, {
-            method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body: new FormData(f)
-        }).then(r => {
-            if (r.ok) {
-                window.location.href = 'dziekuje.html?source=form&type=konsultacja';
-            } else {
-                fallbackKonsultacjaWA(data);
-            }
-        }).catch(() => fallbackKonsultacjaWA(data));
-    } else {
-        // DEV: WhatsApp fallback
-        fallbackKonsultacjaWA(data);
-    }
+    const btn = f.querySelector('button[type="submit"]');
+    const origLabel = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Wysyłanie...'; }
+
+    fetch('https://formsubmit.co/ajax/hipnoterapiabochenek@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+            _subject: 'Konsultacja - zapis przez formularz strony',
+            _captcha: 'false',
+            _template: 'table',
+            'Imie': data.imie,
+            'Telefon': data.telefon,
+            'Email kontaktowy': data.email || '(nie podano)',
+            'Z czym przychodzi': data.problem || '(brak)'
+        })
+    })
+    .then(r => r.json())
+    .then(d => {
+        if (d && (d.success === 'true' || d.success === true)) {
+            window.location.href = 'dziekuje.html?source=form&type=konsultacja';
+        } else {
+            fallbackKonsultacjaWA(data);
+        }
+    })
+    .catch(() => fallbackKonsultacjaWA(data))
+    .finally(() => { if (btn) { btn.disabled = false; btn.textContent = origLabel; } });
+
     return false;
 }
 
