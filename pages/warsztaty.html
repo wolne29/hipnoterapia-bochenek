@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekend Samoregulacji + Autohipnozy · Trojmiasto · Hipnoterapia Bochenek</title>
+<meta name="description" content="Praktyczny weekend dla osob, ktore chca miec sile polaczenia z samym soba. Maks 15 osob, gwarancja zwrotu, atmosfera bez klimatu masowego szkolenia.">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Figtree:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B3A2F'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='600' fill='%23C9A876' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+
+<style>
+:root {
+    --forest: #1B3A2F;
+    --forest-soft: #2C5446;
+    --forest-deep: #0E2419;
+    --coffee: #6B4423;
+    --gold: #C9A876;
+    --gold-soft: #E0C99A;
+    --cream: #FAF6EF;
+    --cream-deep: #F0E7D6;
+    --paper: #FFFFFF;
+    --ink: #1A1614;
+    --ink-soft: #58524B;
+    --ink-faint: #8A7E6F;
+    --rule: #E5DDC9;
+    --shadow: 0 2px 12px rgba(27,58,47,0.06);
+    --shadow-lg: 0 12px 36px rgba(27,58,47,0.12);
+    --t: 0.2s ease;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+a { color: var(--forest); text-decoration: none; transition: color var(--t); }
+a:hover { color: var(--coffee); }
+img { max-width: 100%; display: block; }
+
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* === ANNOUNCE BAR === */
+.announce-bar {
+    background: var(--forest-deep); color: var(--gold);
+    padding: 10px 16px; text-align: center; font-size: 14px;
+}
+.announce-bar a { color: var(--gold-soft); border-bottom: 1px solid var(--gold-soft); }
+.announce-bar a:hover { color: var(--cream); border-color: var(--cream); }
+
+/* === NAV === */
+.nav {
+    padding: 18px 0; background: var(--cream);
+    border-bottom: 1px solid transparent;
+    position: sticky; top: 0; z-index: 100;
+}
+.nav.scrolled { border-bottom-color: var(--rule); background: rgba(250,246,239,0.96); backdrop-filter: blur(10px); }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--forest); }
+.logo span { color: var(--gold); }
+.nav-links { list-style: none; display: flex; gap: 28px; align-items: center; }
+.nav-links a { font-size: 15px; color: var(--ink-soft); font-weight: 500; }
+.nav-links a:hover, .nav-links a.active { color: var(--forest); }
+.nav-links a.active { color: var(--coffee); font-weight: 600; }
+.nav-actions { display: flex; gap: 12px; align-items: center; }
+.nav-phone {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 16px; border-radius: 8px;
+    color: var(--forest); font-weight: 600; font-size: 14px;
+    transition: background var(--t);
+}
+.nav-phone:hover { background: var(--cream-deep); color: var(--coffee); }
+.nav-cta {
+    padding: 11px 22px; background: var(--forest); color: var(--cream);
+    border-radius: 8px; font-weight: 600; font-size: 14px;
+    transition: all var(--t);
+}
+.nav-cta:hover { background: var(--forest-soft); color: var(--cream); transform: translateY(-1px); }
+@media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-phone span { display: none; }
+}
+
+/* === HERO === */
+.hero {
+    padding: 64px 0 80px;
+    background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 100%);
+}
+.hero-grid {
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center;
+}
+.eyebrow {
+    font-family: 'Figtree', sans-serif; font-size: 12px;
+    color: var(--coffee); text-transform: uppercase;
+    letter-spacing: 1.8px; font-weight: 700; margin-bottom: 20px; display: inline-block;
+}
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5.5vw, 60px); font-weight: 600;
+    color: var(--forest); line-height: 1.08; margin-bottom: 22px;
+    letter-spacing: -0.01em;
+}
+.hero h1 em { font-style: italic; color: var(--coffee); }
+.hero-sub {
+    font-size: 19px; color: var(--ink-soft); line-height: 1.6;
+    margin-bottom: 32px; max-width: 560px;
+}
+.guarantee-inline {
+    display: inline-block; padding: 6px 14px;
+    background: rgba(201,168,118,0.18); color: var(--coffee);
+    border: 1px solid var(--gold-soft); border-radius: 100px;
+    font-size: 13px; font-weight: 600; margin-bottom: 24px;
+}
+.hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 8px; padding: 16px 28px; border-radius: 8px;
+    font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600;
+    cursor: pointer; transition: all var(--t); text-decoration: none; border: none;
+}
+.btn-primary { background: var(--forest); color: var(--cream); }
+.btn-primary:hover { background: var(--forest-soft); color: var(--cream); transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+.btn-ghost { background: transparent; color: var(--forest); border: 1.5px solid var(--forest); }
+.btn-ghost:hover { background: var(--forest); color: var(--cream); }
+.btn-arrow { font-size: 18px; }
+
+.hero-meta { display: flex; flex-wrap: wrap; gap: 18px; color: var(--ink-soft); font-size: 14px; }
+.hero-meta-item { display: flex; align-items: center; gap: 8px; }
+.hero-meta-item::before { content: ""; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+.hero-image {
+    position: relative; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 20px 60px rgba(27,58,47,0.18);
+    aspect-ratio: 4/5;
+}
+.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.hero-image::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(14,36,25,0.4));
+    pointer-events: none;
+}
+.hero-image-caption {
+    position: absolute; bottom: 20px; left: 20px; right: 20px;
+    color: var(--cream); font-size: 14px; font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5); z-index: 1;
+}
+@media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-image { aspect-ratio: 3/4; max-width: 480px; margin: 0 auto; }
+}
+
+/* === SECTIONS === */
+section { padding: 80px 0; }
+.section-cream { background: var(--cream); }
+.section-paper { background: var(--paper); }
+.section-forest { background: var(--forest); color: var(--cream); }
+.section-cream-deep { background: var(--cream-deep); }
+
+.section-header { text-align: center; margin-bottom: 48px; max-width: 720px; margin-left: auto; margin-right: auto; }
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 42px); font-weight: 600;
+    color: var(--forest); line-height: 1.18; margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+.section-title em { font-style: italic; color: var(--coffee); }
+.section-title-light { color: var(--cream); }
+.section-title-light em { color: var(--gold-soft); }
+.section-lead { color: var(--ink-soft); font-size: 17px; line-height: 1.7; }
+.section-lead-light { color: rgba(250,246,239,0.8); }
+.kicker {
+    display: inline-block;
+    font-family: 'Figtree', sans-serif; font-size: 12px;
+    letter-spacing: 1.8px; text-transform: uppercase;
+    color: var(--coffee); font-weight: 700; margin-bottom: 14px;
+}
+.kicker-light { color: var(--gold); }
+
+/* === QUICK WINS BAR === */
+.quick-wins { background: var(--forest-deep); color: var(--cream); padding: 28px 0; }
+.quick-wins-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px; align-items: center;
+}
+.qw-item { display: flex; align-items: center; gap: 14px; }
+.qw-icon {
+    width: 44px; height: 44px; background: var(--gold); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 18px; color: var(--forest-deep);
+}
+.qw-text strong { display: block; font-size: 15px; font-weight: 700; color: var(--cream); }
+.qw-text span { color: rgba(250,246,239,0.65); font-size: 13px; }
+
+/* === GRID 4 CARDS === */
+.grid-4 {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;
+}
+.card {
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 32px 28px; transition: all var(--t);
+}
+.card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: var(--gold); }
+.card-emoji { font-size: 32px; margin-bottom: 16px; display: block; }
+.card h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--forest); margin-bottom: 10px; font-weight: 600; }
+.card p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; }
+
+/* === COMPARISON 3 COLUMNS === */
+.comparison-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.comp-col { padding: 32px 24px; border-radius: 14px; background: rgba(250,246,239,0.06); }
+.comp-col.featured { background: var(--gold); color: var(--forest-deep); transform: scale(1.05); box-shadow: 0 12px 32px rgba(201,168,118,0.3); }
+.comp-col h3 {
+    font-family: 'Figtree', sans-serif; font-size: 13px; letter-spacing: 1.5px;
+    text-transform: uppercase; margin-bottom: 16px; font-weight: 700;
+    color: rgba(250,246,239,0.6);
+}
+.comp-col.featured h3 { color: var(--forest-deep); }
+.comp-col ul { list-style: none; padding: 0; }
+.comp-col ul li {
+    padding: 12px 0; border-bottom: 1px solid rgba(250,246,239,0.1);
+    font-size: 14.5px; color: rgba(250,246,239,0.85); line-height: 1.5;
+}
+.comp-col.featured ul li { color: var(--forest-deep); font-weight: 500; border-color: rgba(27,58,47,0.15); }
+.comp-col ul li:last-child { border-bottom: none; }
+@media (max-width: 800px) { .comparison-grid { grid-template-columns: 1fr; } .comp-col.featured { transform: none; } }
+
+/* === CURRICULUM === */
+.curriculum-days {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px;
+}
+.day-card {
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 16px; padding: 36px 32px; box-shadow: var(--shadow);
+}
+.day-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 18px; margin-bottom: 22px;
+    border-bottom: 2px solid var(--gold);
+}
+.day-num { font-family: 'Figtree', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--coffee); }
+.day-time { font-size: 14px; color: var(--ink-faint); }
+.module-list { list-style: none; padding: 0; counter-reset: mod; }
+.module-list li {
+    padding: 14px 0 14px 48px; position: relative;
+    border-bottom: 1px solid var(--rule); counter-increment: mod;
+}
+.module-list li::before {
+    content: counter(mod, decimal-leading-zero);
+    position: absolute; left: 0; top: 14px;
+    font-family: 'Playfair Display', serif; font-weight: 600;
+    color: var(--coffee); font-size: 14px;
+    background: var(--cream-deep); padding: 4px 10px; border-radius: 6px;
+}
+.module-list li:last-child { border-bottom: none; }
+.mod-title { font-weight: 600; color: var(--forest); display: block; }
+.mod-desc { color: var(--ink-soft); font-size: 14px; margin-top: 4px; }
+
+/* === VALUE STACK === */
+.value-stack {
+    max-width: 760px; margin: 56px auto 0;
+    background: var(--paper); border: 2px solid var(--gold);
+    border-radius: 20px; padding: 40px 48px; box-shadow: var(--shadow);
+}
+.value-stack h3 {
+    font-family: 'Playfair Display', serif; font-size: 24px;
+    color: var(--forest); margin-bottom: 24px; font-weight: 600;
+}
+.value-list { list-style: none; padding: 0; }
+.value-list li {
+    padding: 14px 0 14px 36px; position: relative;
+    color: var(--ink); font-size: 15.5px; line-height: 1.65;
+    border-bottom: 1px solid var(--rule);
+}
+.value-list li:last-child { border-bottom: none; }
+.value-list li::before {
+    content: "✓"; position: absolute; left: 0; top: 14px;
+    width: 24px; height: 24px; background: var(--gold); color: var(--forest-deep);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: bold;
+}
+
+/* === PRICING === */
+.pricing-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+}
+.price-card {
+    background: var(--paper); border: 2px solid var(--rule);
+    border-radius: 16px; padding: 36px 28px;
+    transition: all var(--t); position: relative;
+}
+.price-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.price-card.featured { border-color: var(--gold); box-shadow: var(--shadow-lg); }
+.price-badge {
+    position: absolute; top: -12px; right: 20px;
+    padding: 5px 14px; background: var(--gold); color: var(--forest-deep);
+    font-family: 'Figtree', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase; border-radius: 100px;
+}
+.price-badge.dark { background: var(--forest); color: var(--cream); }
+.price-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 22px;
+    color: var(--forest); margin-bottom: 8px; font-weight: 600;
+}
+.price-amount {
+    font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700;
+    color: var(--forest); line-height: 1; margin: 16px 0 4px;
+}
+.price-amount sup { font-size: 22px; vertical-align: middle; color: var(--ink-soft); font-weight: 600; }
+.price-amount-suffix { font-size: 14px; color: var(--ink-faint); font-weight: 500; }
+.price-note { color: var(--ink-faint); font-size: 14px; margin-bottom: 24px; }
+.price-features { list-style: none; padding: 0; margin: 24px 0; }
+.price-features li {
+    padding: 8px 0 8px 28px; position: relative;
+    color: var(--ink); font-size: 14.5px; line-height: 1.55;
+    border-bottom: 1px solid var(--rule);
+}
+.price-features li:last-child { border-bottom: none; }
+.price-features li::before {
+    content: "✓"; position: absolute; left: 0; top: 8px;
+    width: 20px; height: 20px; background: var(--gold); color: var(--forest-deep);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: bold;
+}
+.price-cta { display: block; text-align: center; margin-top: 8px; }
+
+.pricing-note { text-align: center; color: var(--ink-faint); margin-top: 32px; font-size: 14px; }
+
+/* === GUARANTEE BOX === */
+.guarantee-box {
+    max-width: 760px; margin: 48px auto 0;
+    padding: 28px 32px;
+    background: rgba(201,168,118,0.15);
+    border-left: 4px solid var(--gold); border-radius: 12px;
+    display: flex; gap: 20px; align-items: center;
+}
+.guarantee-icon {
+    flex-shrink: 0; width: 56px; height: 56px;
+    background: var(--paper); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 28px;
+}
+.guarantee-text h4 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--forest); margin-bottom: 4px; font-weight: 600; }
+.guarantee-text p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.55; }
+
+/* === PATHS === */
+.paths-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.path-card {
+    background: rgba(250,246,239,0.05); border: 1px solid rgba(250,246,239,0.1);
+    border-radius: 14px; padding: 32px 28px; transition: all var(--t);
+}
+.path-card:hover { background: rgba(250,246,239,0.08); border-color: var(--gold); }
+.path-letter {
+    display: inline-block; width: 48px; height: 48px;
+    background: var(--gold); color: var(--forest-deep);
+    border-radius: 50%; font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700; line-height: 48px;
+    text-align: center; margin-bottom: 16px;
+}
+.path-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--cream); margin-bottom: 8px; font-weight: 600; }
+.path-price { font-size: 14px; color: var(--gold-soft); font-weight: 600; margin-bottom: 12px; }
+.path-card p { color: rgba(250,246,239,0.8); font-size: 14.5px; line-height: 1.65; }
+.path-stat { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(250,246,239,0.1); font-size: 13px; color: rgba(250,246,239,0.6); }
+.path-stat strong { color: var(--gold-soft); }
+
+/* === ABOUT === */
+.about-grid { display: grid; grid-template-columns: 0.6fr 1fr; gap: 56px; align-items: center; }
+.about-image {
+    border-radius: 16px; overflow: hidden;
+    box-shadow: 0 12px 40px rgba(27,58,47,0.12); aspect-ratio: 4/5;
+}
+.about-image img { width: 100%; height: 100%; object-fit: cover; }
+.about-content h2 { margin-bottom: 20px; text-align: left; }
+.about-content .lead { font-size: 19px; color: var(--forest); font-weight: 500; margin-bottom: 20px; line-height: 1.55; }
+.about-content p { color: var(--ink-soft); margin-bottom: 16px; line-height: 1.7; }
+.about-content strong { color: var(--ink); }
+.credentials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.cred-pill {
+    padding: 6px 14px; background: rgba(201,168,118,0.18);
+    color: var(--coffee); border-radius: 100px;
+    font-size: 13px; font-weight: 600;
+}
+@media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; } .about-image { max-width: 360px; } }
+
+/* === FAQ === */
+.faq-wrap { max-width: 760px; margin: 0 auto; }
+.faq {
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 12px; margin-bottom: 12px; transition: border-color var(--t);
+}
+.faq:hover { border-color: var(--gold); }
+.faq summary {
+    cursor: pointer; padding: 22px 28px;
+    font-weight: 600; color: var(--forest); font-size: 16px;
+    list-style: none; display: flex; justify-content: space-between;
+    align-items: center; gap: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+    content: "+"; font-size: 28px; color: var(--gold);
+    font-weight: 300; transition: transform var(--t); flex-shrink: 0;
+}
+.faq[open] summary::after { transform: rotate(45deg); }
+.faq-content { padding: 0 28px 22px; color: var(--ink-soft); line-height: 1.7; }
+.faq-content strong { color: var(--ink); }
+.faq-content em { color: var(--coffee); font-style: italic; }
+.faq-content a { color: var(--coffee); text-decoration: underline; }
+
+/* === CONTACT === */
+.contact-wrap { max-width: 760px; margin: 0 auto; text-align: center; }
+.contact-options { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 32px; }
+.contact-card-large {
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 14px; padding: 28px 24px;
+    flex: 1 1 280px; max-width: 360px;
+    transition: all var(--t); text-decoration: none; overflow: hidden;
+}
+.contact-card-large:hover { border-color: var(--gold); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.contact-icon { font-size: 28px; margin-bottom: 10px; line-height: 1; color: var(--coffee); }
+.contact-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; margin-bottom: 6px; font-family: 'Figtree', sans-serif; }
+.contact-value { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--forest); font-weight: 600; word-break: break-all; line-height: 1.3; }
+.contact-help { font-size: 13px; color: var(--ink-faint); margin-top: 8px; }
+
+.signup-steps {
+    max-width: 720px; margin: 48px auto 0;
+    padding: 32px 36px; background: var(--cream-deep); border-radius: 16px;
+}
+.signup-steps h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--forest); margin-bottom: 20px; font-weight: 600; }
+.step { display: flex; gap: 16px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.step:last-child { border-bottom: none; }
+.step-num {
+    flex-shrink: 0; width: 36px; height: 36px;
+    background: var(--gold); color: var(--forest-deep); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700;
+}
+.step p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; padding-top: 6px; }
+.step strong { color: var(--ink); }
+
+/* === FOOTER === */
+footer {
+    padding: 48px 0 32px; border-top: 1px solid var(--rule);
+    background: var(--cream-deep); text-align: center;
+    color: var(--ink-soft); font-size: 14px;
+}
+footer a { color: var(--coffee); }
+footer a:hover { color: var(--forest); }
+footer p { margin-bottom: 8px; }
+
+@media (max-width: 600px) {
+    .hero { padding: 40px 0 60px; }
+    section { padding: 60px 0; }
+    .hero-cta-row { flex-direction: column; }
+    .hero-cta-row .btn { width: 100%; }
+    .price-amount { font-size: 40px; }
+    .pricing-grid { gap: 28px; }
+    .signup-steps { padding: 24px 20px; }
+    .guarantee-box { flex-direction: column; text-align: center; padding: 24px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announce-bar">
+    <strong>Bezpłatna konsultacja</strong> · Gwarancja zwrotu po 1. sesji ·
+    <a href="#zapisz">Zarezerwuj miejsce →</a>
+</div>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="logo">Hipnoterapia <span>Bochenek</span></a>
+        <ul class="nav-links">
+            <li><a href="/#dla-kogo">Dla kogo</a></li>
+            <li><a href="/#metoda">Metoda</a></li>
+            <li><a href="/#programy">Programy</a></li>
+            <li><a href="/#cennik">Cennik</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
+            <li><a href="warsztaty.html" class="active">Warsztaty</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="tel:+48732137266" class="nav-phone" aria-label="Zadzwoń">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>732 137 266</span>
+            </a>
+            <a href="#zapisz" class="nav-cta">Zarezerwuj</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <span class="eyebrow">Weekend · 12 godzin · Trójmiasto</span>
+                <h1>Twój układ nerwowy <em>- instrukcja obsługi</em></h1>
+                <p class="hero-sub">Praktyczny weekend dla osób, które chcą mieć siłę połączenia z samym sobą. Bez klimatu masowego szkolenia. <strong>50% praktyki w sali</strong>, fantastyczna atmosfera, realna zmiana.</p>
+                <span class="guarantee-inline">Gwarancja zwrotu po 1. sesji</span>
+                <div class="hero-cta-row">
+                    <a href="#zapisz" class="btn btn-primary">Zarezerwuj miejsce <span class="btn-arrow">→</span></a>
+                    <a href="#program" class="btn btn-ghost">Zobacz program</a>
+                </div>
+                <div class="hero-meta">
+                    <span class="hero-meta-item">Maks. 15 osób</span>
+                    <span class="hero-meta-item">Cena od 1 490 zł/osoba (z parą)</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/warsztaty/bochenek-prowadzi-1200.jpg"
+                     srcset="assets/warsztaty/bochenek-prowadzi-600.jpg 600w, assets/warsztaty/bochenek-prowadzi-800.jpg 800w, assets/warsztaty/bochenek-prowadzi-1200.jpg 1200w, assets/warsztaty/bochenek-prowadzi-1600.jpg 1600w"
+                     sizes="(max-width: 900px) 480px, 540px"
+                     alt="Tomasz Bochenek prowadzi szkolenie - rozłożone ręce, gestykulacja"
+                     loading="eager" fetchpriority="high">
+                <div class="hero-image-caption">Tomasz Bochenek · prowadzi szkolenie</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- QUICK WINS BAR -->
+<section class="quick-wins">
+    <div class="container">
+        <div class="quick-wins-grid">
+            <div class="qw-item"><div class="qw-icon">🎯</div><div class="qw-text"><strong>9 narzędzi szybkich</strong><span>Każdy z konkretnym użyciem</span></div></div>
+            <div class="qw-item"><div class="qw-icon">🧠</div><div class="qw-text"><strong>2 protokoły autohipnozy</strong><span>Do nagrania własnym głosem</span></div></div>
+            <div class="qw-item"><div class="qw-icon">🔄</div><div class="qw-text"><strong>21-dniowy plan</strong><span>+ Master Toolkit 8 stron</span></div></div>
+            <div class="qw-item"><div class="qw-icon">✓</div><div class="qw-text"><strong>Gwarancja zwrotu</strong><span>Po 1. sesji bez pytań</span></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ATMOSFERA -->
+<section class="section-cream">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">Twoja atmosfera weekendu</span>
+            <h2 class="section-title">Mała grupa. <em>Praktyczna zmiana</em>. Komfort i bezpieczeństwo.</h2>
+            <p class="section-lead">Zależy mi na praktycznej wartości i poczuciu komfortu - dla osób, które chcą mieć siłę połączenia z samym sobą, bez klimatu masowego szkolenia. Ma być realna zmiana i fantastyczna atmosfera.</p>
+        </div>
+        <div class="grid-4">
+            <div class="card">
+                <span class="card-emoji">🎯</span>
+                <h3>Praktyczna wartość</h3>
+                <p>50% praktyki w sali, nie 80% wykładu. Każde narzędzie próbujesz <strong>na żywo</strong> - autohipnozę, oddech, somatykę. Wychodzisz z weekendu z <strong>realną umiejętnością</strong>, nie ze "wiedzą że ten temat istnieje".</p>
+            </div>
+            <div class="card">
+                <span class="card-emoji">🤝</span>
+                <h3>Komfort i bezpieczeństwo</h3>
+                <p>Zasada <strong>stop-sign</strong> - przerywasz w każdej chwili, bez tłumaczenia. Bez osądu, bez wymuszania. Bezpieczna grupa: pre-screening + mały format + jasne granice tego, co robimy i czego nie ruszamy.</p>
+            </div>
+            <div class="card">
+                <span class="card-emoji">🌿</span>
+                <h3>Siła połączenia ze sobą</h3>
+                <p>Czas, w którym jesteś <strong>dla siebie</strong> - nie dla rodziny, klienta, partnera. 12 godzin pracy z własnym układem nerwowym, myśleniem, ciałem. Wychodzisz z czystszym <strong>wewnętrznym kompasem</strong>, nie tylko z notatkami.</p>
+            </div>
+            <div class="card">
+                <span class="card-emoji">✨</span>
+                <h3>Bez klimatu masowego szkolenia</h3>
+                <p>Maks 15 osób. Intymna grupa zamiast sali konferencyjnej. Dobry catering, kawa, miejsca do oddechu między modułami. <strong>Fantastyczna atmosfera</strong> jest częścią metody, nie dodatkiem.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DLA KOGO -->
+<section class="section-paper">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">Dla kogo</span>
+            <h2 class="section-title">Czujesz się <em>przeciążony/a</em>, mimo że obiektywnie wszystko jest OK?</h2>
+            <p class="section-lead">Ten weekend jest dla Ciebie, jeśli rozpoznajesz się w jednym z tych profili.</p>
+        </div>
+        <div class="grid-4">
+            <div class="card"><span class="card-emoji">🌙</span><h3>Bezsenność, ruminacja</h3><p>Budzisz się w nocy. Głowa nie chce się wyłączyć. Próbowałeś medytacji, melatoninę - słabo.</p></div>
+            <div class="card"><span class="card-emoji">⚡</span><h3>Lęk, ataki paniki</h3><p>Niepokój bazowy. Ataki paniki bez powodu. Lekkie kołatanie i już spirala.</p></div>
+            <div class="card"><span class="card-emoji">🔥</span><h3>Wypalenie, brak energii</h3><p>Praca, relacje, codzienność. Czujesz, że coś Cię wykańcza. Wieczorem nic nie zostaje dla Ciebie.</p></div>
+            <div class="card"><span class="card-emoji">🌱</span><h3>Bez wcześniejszej wiedzy</h3><p>Nie musisz znać neurobiologii, hipnozy, terapii. Zaczynamy od zera. 50% praktyki, 50% wykładu.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- CO ODROZNIA -->
+<section class="section-forest">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker kicker-light">Co odróżnia ten weekend</span>
+            <h2 class="section-title section-title-light">Most między <em>samoregulacją codzienną</em> a <em>autohipnozą głęboką</em>.</h2>
+            <p class="section-lead section-lead-light">Nie wybieraj między. Tu masz oba w jednym weekendzie.</p>
+        </div>
+        <div class="comparison-grid">
+            <div class="comp-col">
+                <h3>Typowy warsztat stresu</h3>
+                <ul><li>"Oddychaj głęboko" + medytacja</li><li>Brak głębi merytorycznej</li><li>Wszystko jednolite</li><li>Brak kontynuacji po</li><li>Bez gwarancji</li></ul>
+            </div>
+            <div class="comp-col featured">
+                <h3>Ten weekend</h3>
+                <ul><li><strong>Most</strong> samoregulacja → autohipnoza</li><li>Oba: <strong>fundament + głębia</strong></li><li>Techniki + 7 filarów codzienności</li><li><strong>21-dniowy plan</strong> + Toolkit + maile</li><li><strong>50% praktyka</strong> w sali</li><li>Gwarancja zwrotu po 1. sesji</li></ul>
+            </div>
+            <div class="comp-col">
+                <h3>Typowe szkolenie hipnozy</h3>
+                <ul><li>"Indukcje, sugestie"</li><li>Brak fundamentu codziennego</li><li>Dla terapeutów / wąska grupa</li><li>Głównie wykład</li><li>Brak praktyki w sali</li></ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program" class="section-cream-deep">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">Co dostaniesz</span>
+            <h2 class="section-title">11 modułów. <em>9 narzędzi. 2 protokoły autohipnozy.</em></h2>
+            <p class="section-lead">Każdy moduł ma teoretyczną bazę (max 25 min) + dużo praktyki w sali.</p>
+        </div>
+
+        <div class="curriculum-days">
+            <div class="day-card">
+                <div class="day-header"><span class="day-num">Dzień 1 · sobota</span><span class="day-time">09:00 - 18:00</span></div>
+                <ol class="module-list">
+                    <li><span class="mod-title">Wprowadzenie</span><span class="mod-desc">Ćwiczenie "gdzie jestem teraz" + mapa weekendu.</span></li>
+                    <li><span class="mod-title">Fundamenty (poliwagal)</span><span class="mod-desc">3 stany ANS jak światło drogowe.</span></li>
+                    <li><span class="mod-title">Diagnoza systemu</span><span class="mod-desc">Twoje triggery + zasoby.</span></li>
+                    <li><span class="mod-title">Oddech (4 techniki)</span><span class="mod-desc">Wzdychanie, box, 4-7-8, coherent.</span></li>
+                    <li><span class="mod-title">Ciało (5 narzędzi)</span><span class="mod-desc">Grounding, shake-off, self-havening, PMR, tapping.</span></li>
+                    <li><span class="mod-title">Myśli (CBT/ACT)</span><span class="mod-desc">Etykietowanie, defuzja, ABCDE, dystansowanie.</span></li>
+                </ol>
+            </div>
+            <div class="day-card">
+                <div class="day-header"><span class="day-num">Dzień 2 · niedziela</span><span class="day-time">12:00 - 18:30</span></div>
+                <ol class="module-list" style="counter-reset: mod 6;">
+                    <li><span class="mod-title">Autohipnoza intro</span><span class="mod-desc">5 mitów + neurofizjologia + test Hilgarda.</span></li>
+                    <li><span class="mod-title">Indukcje (90 min praktyki)</span><span class="mod-desc">4 indukcje praktykowane w sali. Wybierasz swoją.</span></li>
+                    <li><span class="mod-title">Sugestie</span><span class="mod-desc">Konstrukcja sugestii (Erickson). 5 typowych celów.</span></li>
+                    <li><span class="mod-title">7 filarów codzienności</span><span class="mod-desc">Sen, rytm, ruch, dieta, myśli, relacje, środowisko.</span></li>
+                    <li><span class="mod-title">Plan 21 dni + oferta</span><span class="mod-desc">Wybór 1 filaru + voucher absolwencki.</span></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="value-stack">
+            <h3>Co dostajesz w pakiecie:</h3>
+            <ul class="value-list">
+                <li><strong>2 dni · 12 godzin praktyki w sali</strong> - Trójmiasto, max 15 osób</li>
+                <li><strong>Pełny przewodnik praktyczny - 122 strony PDF</strong> mailowo</li>
+                <li><strong>Master Toolkit 8 stron</strong> - mistrzowskie kompendium praktyki, do druku</li>
+                <li><strong>9 materiałów A4 do wydruku</strong> - mapa systemu, lista 9 narzędzi, skrypty autohipnozy, plan dobowy, kalendarz 21 dni, czerwone flagi, audyt 7 filarów, mini-bibliografia z DOI</li>
+                <li><strong>21-dniowa sekwencja maili wspierających</strong> - codziennie 1 mail z mikrozadaniem (90 sek czytania)</li>
+                <li><strong>Voucher absolwencki</strong> - bezpłatna konsultacja diagnostyczna 60 min (wartość 150 zł) + bonus follow-up gratis przy zakupie pakietu</li>
+                <li><strong>Catering wegetariański + mięsny</strong>, kawa, herbata, lekki obiad</li>
+                <li><strong>Mail po tygodniu</strong> z pytaniem jak idzie + szansa na osobistą rozmowę po 21 dniach</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CENNIK -->
+<section id="zapisz" class="section-paper">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">3 opcje</span>
+            <h2 class="section-title">Wybierz <em>tę, która pasuje</em>.</h2>
+            <p class="section-lead">Mniejsza grupa = większa intymność pracy.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Solo</h3>
+                <div class="price-amount">1 690<sup>zł</sup></div>
+                <p class="price-note">Cały weekend, samodzielnie</p>
+                <ul class="price-features">
+                    <li>2 dni · 12 godzin w sali</li>
+                    <li>Pełny przewodnik 122 strony</li>
+                    <li>Master Toolkit + 9 handoutów</li>
+                    <li>21-dniowa sekwencja maili</li>
+                    <li>Voucher absolwencki</li>
+                    <li>Catering wliczony</li>
+                </ul>
+                <a href="mailto:hipnoterapiabochenek@gmail.com?subject=Weekend%20Solo%20-%20zapis" class="btn btn-ghost price-cta">Zapisz mnie</a>
+            </div>
+
+            <div class="price-card featured">
+                <span class="price-badge">Najlepsza cena</span>
+                <h3>Z parą</h3>
+                <div class="price-amount">1 490<sup>zł</sup><span class="price-amount-suffix"> /osoba</span></div>
+                <p class="price-note">Przy zapisie 2 osób razem · oszczędność 200 zł/osoba</p>
+                <ul class="price-features">
+                    <li>To samo co Solo</li>
+                    <li>Razem przeżyjcie weekend</li>
+                    <li>Łatwiejsze wsparcie po weekendzie</li>
+                    <li>Voucher absolwencki dla każdego</li>
+                    <li>Idealnie dla par, rodziców, rodzeństwa</li>
+                    <li>Catering wliczony</li>
+                </ul>
+                <a href="mailto:hipnoterapiabochenek@gmail.com?subject=Weekend%20z%20para%20-%20zapis" class="btn btn-primary price-cta">Zapisz nas</a>
+            </div>
+
+            <div class="price-card">
+                <span class="price-badge dark">Premium</span>
+                <h3>Premium</h3>
+                <div class="price-amount">2 995<sup>zł</sup></div>
+                <p class="price-note">Weekend + Pakiet Transformacji absolwencko</p>
+                <ul class="price-features">
+                    <li>Cały weekend + materiały</li>
+                    <li><strong>+ 3 sesje hipnoterapii 1-1</strong></li>
+                    <li><strong>+ 1 follow-up po 3 mies gratis</strong></li>
+                    <li>Praca na konkretnym problemie</li>
+                    <li>Email + telefon support</li>
+                    <li><strong>Wartość ~4 440 zł</strong> w cenie 2 995 zł</li>
+                </ul>
+                <a href="mailto:hipnoterapiabochenek@gmail.com?subject=Weekend%20Premium%20-%20zapis" class="btn btn-ghost price-cta">Zapisz mnie</a>
+            </div>
+        </div>
+
+        <p class="pricing-note"><strong>Limit grupy: maks. 15 osób</strong> - dla pełnej jakości pracy w sali. Faktura na życzenie.</p>
+
+        <div class="guarantee-box">
+            <div class="guarantee-icon">🛡️</div>
+            <div class="guarantee-text">
+                <h4>Gwarancja zwrotu po pierwszej sesji</h4>
+                <p>Jeśli po pierwszej sesji w sobotę nie czujesz wartości - oddaję pełną kwotę bez pytań.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PO WEEKENDZIE -->
+<section class="section-forest">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker kicker-light">Po weekendzie</span>
+            <h2 class="section-title section-title-light">Trzy <em>ścieżki dalej</em>. Wybierasz tę, która pasuje.</h2>
+            <p class="section-lead section-lead-light">Bez presji. ~50% praktykuje sam, ~30% wybiera sesje 1-1, ~15-20% pakiet głębszej pracy.</p>
+        </div>
+        <div class="paths-grid">
+            <div class="path-card">
+                <span class="path-letter">A</span>
+                <h3>Praktykuj sam/a</h3>
+                <p class="path-price">w cenie weekendu</p>
+                <p>Wszystkie materiały zostają z Tobą. Master Toolkit, 21-dniowa sekwencja maili, pełny dossier.</p>
+                <p class="path-stat"><strong>~50%</strong> absolwentów wybiera tę ścieżkę</p>
+            </div>
+            <div class="path-card">
+                <span class="path-letter">B</span>
+                <h3>Pakiet Transformacji</h3>
+                <p class="path-price">2 000 zł + bonus follow-up gratis</p>
+                <p>3 sesje hipnoterapii 1-1 (90-120 min). Voucher absolwencki: 1 dodatkowa sesja follow-up po 3 mies gratis.</p>
+                <p class="path-stat"><strong>~30%</strong> absolwentów</p>
+            </div>
+            <div class="path-card">
+                <span class="path-letter">C</span>
+                <h3>Mentoring Premium</h3>
+                <p class="path-price">4 500 zł + 2 follow-up gratis</p>
+                <p>6 sesji + bonusy. Dla głębszej pracy: trauma, wypalenie, pewność siebie.</p>
+                <p class="path-stat"><strong>~15-20%</strong> absolwentów</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- O PROWADZACYM -->
+<section class="section-cream">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="assets/warsztaty/bochenek-prowadzi-600.jpg" srcset="assets/warsztaty/bochenek-prowadzi-600.jpg 600w, assets/warsztaty/bochenek-prowadzi-800.jpg 800w" sizes="(max-width: 800px) 360px, 440px" alt="Tomasz Bochenek" loading="lazy">
+            </div>
+            <div class="about-content">
+                <span class="kicker">Prowadzący</span>
+                <h2 class="section-title">Tomasz Bochenek</h2>
+                <p class="lead">Hipnoterapeuta z gabinetem w Gdańsku-Letnicy. Pracuję z bezsennością, lękiem, wypaleniem zawodowym, ruminacją, pewnością siebie i uwolnieniem emocji.</p>
+                <p>Łączę: <strong>klasyczną hipnoterapię ericksonowską</strong> (Erickson, Elman, Rossi, Hilgard), <strong>poliwagalną teorię</strong> (Stephen Porges), <strong>CBT-I</strong> (terapia bezsenności), <strong>Somatic Experiencing</strong> (Peter Levine), <strong>współczesne tooling</strong> (Huberman, Walker, Balban Stanford 2023).</p>
+                <p>Bez ezoteryki. Bez "pozytywnego myślenia". Bez magicznych obietnic. <strong>Tylko zwalidowane techniki, podane po ludzku.</strong></p>
+                <div class="credentials">
+                    <span class="cred-pill">Hipnoterapia holistyczna</span>
+                    <span class="cred-pill">Akademia Petersona</span>
+                    <span class="cred-pill">CBT-I bezsenności</span>
+                    <span class="cred-pill">Polyvagal Theory</span>
+                    <span class="cred-pill">Setki przeprowadzonych sesji</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-cream-deep">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">Częste pytania</span>
+            <h2 class="section-title">Zanim się zapiszesz</h2>
+        </div>
+        <div class="faq-wrap">
+            <details class="faq"><summary>Czy potrzebuję wcześniejszej wiedzy o hipnozie / neurobiologii / psychologii?</summary><div class="faq-content"><p><strong>Nie.</strong> Wszystko zaczynamy od zera. Każdy moduł ma sekcję teoretyczną (max 25 min) plus dużo praktyki.</p></div></details>
+            <details class="faq"><summary>Co jeśli wpadnę w silne emocje podczas ćwiczeń?</summary><div class="faq-content"><p>Każde ćwiczenie jest <em>zaproszeniem, nie nakazem</em>. Możesz przerwać w każdej chwili (zasada "stop sign"). <strong>Nie pracujemy z osobistą traumą w grupie</strong> - jeśli pojawi się duża emocja, zatrzymujemy się i rozmawiamy 1:1 w przerwie.</p></div></details>
+            <details class="faq"><summary>Czy to zastąpi terapię u psychologa / psychiatry?</summary><div class="faq-content"><p><strong>Nie.</strong> Ten weekend jest <em>adjunctem</em> (uzupełnieniem), nie zamiennikiem. Jeśli powinieneś być u specjalisty (depresja kliniczna, trauma, SI) - w trakcie weekendu otrzymasz skierowanie do publicznych źródeł (telefon zaufania 800 70 22 22, GUMed Klinika Psychiatrii, Centrum Kryzysowe Gdańsk, baza pttpb.pl, emdr.org.pl).</p></div></details>
+            <details class="faq"><summary>Co jeśli biorę leki psychiatryczne (SSRI, benzodiazepiny)?</summary><div class="faq-content"><p>Możesz uczestniczyć. Techniki są <strong>bezpieczne wraz z lekami</strong>. <strong>Nigdy</strong> nie odstawiaj leków na podstawie szkolenia - to robisz tylko z psychiatrą.</p></div></details>
+            <details class="faq"><summary>Czy mogę przyjść z partnerem / partnerką?</summary><div class="faq-content"><p>Tak - i polecam. <strong>Para razem płaci 1 490 zł / osoba</strong> (oszczędzasz 200 zł / osoba).</p></div></details>
+            <details class="faq"><summary>Czy będą nagrania?</summary><div class="faq-content"><p><strong>Nie.</strong> Świadoma decyzja - ochrona prywatności grupy. Zamiast nagrań dostajesz <em>pełny przewodnik</em> 122 strony PDF.</p></div></details>
+            <details class="faq"><summary>Co jeśli nie będę mógł/mogła być?</summary><div class="faq-content"><p>Polityka anulacji: <strong>14+ dni przed</strong> = pełen zwrot. <strong>7-14 dni</strong> = 50%. <strong>&lt;7 dni</strong> = 0% (chyba że zastępca - pełen zwrot). Z zachowaniem uprawnień konsumenta - szczegóły w <a href="regulamin.html">Regulaminie</a>.</p></div></details>
+            <details class="faq"><summary>Wahasz się? Bezpłatny webinar 60 min na początek?</summary><div class="faq-content"><p>Tak. Raz w miesiącu prowadzę <strong>bezpłatny webinar 60 min</strong>: "3 narzędzia regulacji które sprawdzisz dziś". Wszystkie 3 narzędzia próbujesz <em>na żywo</em>. Zapisz się przez kontakt poniżej - <em>"webinar"</em> w temacie.</p></div></details>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="section-paper">
+    <div class="container">
+        <div class="contact-wrap">
+            <span class="kicker">Zapisz się albo zapytaj</span>
+            <h2 class="section-title">Najprościej - <em>napisz albo zadzwoń</em>.</h2>
+            <p class="section-lead">Bez formularzy, bez logowań. Odpisuję / oddzwaniam w 24h.</p>
+
+            <div class="contact-options">
+                <a href="mailto:hipnoterapiabochenek@gmail.com?subject=Weekend%20samoregulacji%20-%20zapis" class="contact-card-large">
+                    <div class="contact-icon">✉</div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">hipnoterapiabochenek@gmail.com</div>
+                    <div class="contact-help">Najlepiej wieczorem - odpisuję rano.</div>
+                </a>
+                <a href="tel:+48732137266" class="contact-card-large">
+                    <div class="contact-icon">☏</div>
+                    <div class="contact-label">Telefon</div>
+                    <div class="contact-value">+48 732 137 266</div>
+                    <div class="contact-help">Pn-Pt 10:00-18:00. Jeśli nie odbieram - oddzwoni.</div>
+                </a>
+            </div>
+
+            <div class="signup-steps">
+                <h3>Co się dzieje po Twoim mailu / telefonie?</h3>
+                <div class="step"><span class="step-num">1</span><p><strong>Krótka rozmowa</strong> - sprawdzam, czy weekend Ci pasuje (czasem proponuję inną ścieżkę).</p></div>
+                <div class="step"><span class="step-num">2</span><p><strong>Wysyłam Ci 3 pytania pre-screening</strong> mailowo (1 minuta).</p></div>
+                <div class="step"><span class="step-num">3</span><p><strong>Otrzymujesz numer konta i potwierdzenie miejsca.</strong> Zaliczka 30% w 7 dni.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p><a href="/">hipnoterapiabochenek.pl</a> · <a href="https://instagram.com/hipnoterapiabochenek">@hipnoterapiabochenek</a></p>
+        <p>Tomasz Bochenek · Hipnoterapia · Gdańsk Letnica</p>
+        <p style="margin-top: 16px;">
+            <a href="regulamin.html">Regulamin</a> · <a href="polityka-prywatnosci.html">Polityka prywatności</a> · <a href="mailto:hipnoterapiabochenek@gmail.com">Kontakt mailowy</a>
+        </p>
+        <p style="font-size: 13px; margin-top: 16px;">© 2026 Tomasz Bochenek. Wszystkie prawa zastrzeżone.</p>
+        <p style="font-size: 12px; margin-top: 12px; max-width: 720px; margin-left: auto; margin-right: auto; color: var(--ink-faint);">
+            Weekend ma charakter wsparcia edukacyjno-terapeutycznego. Nie zastępuje świadczeń zdrowotnych ani psychoterapii. Pełne informacje o granicach usługi w Regulaminie.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
