@@ -24,6 +24,12 @@
     window.fbq('track', 'PageView');
   }
 
+  // Public helper: silent no-op gdy brak zgody, w przeciwnym razie tracking.
+  // Użycie: window.bochenekTrack('Lead', { content_name: 'darmowa-konsultacja' });
+  window.bochenekTrack = function (eventName, params) {
+    if (window.fbq) window.fbq('track', eventName, params || {});
+  };
+
   function injectStyles() {
     if (document.getElementById('cookie-consent-styles')) return;
     var s = document.createElement('style');

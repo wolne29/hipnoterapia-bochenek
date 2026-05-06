@@ -282,6 +282,15 @@ document.querySelectorAll('.faq__item').forEach((item) => {
       '</p>';
     form.replaceWith(wrap);
     wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    if (window.bochenekTrack) {
+      window.bochenekTrack('Lead', {
+        content_name: 'darmowa-konsultacja',
+        content_category: 'konsultacja-wstepna',
+        currency: 'PLN',
+        value: 0
+      });
+    }
   }
 
   function showError(form, btn, originalLabel) {
@@ -427,5 +436,22 @@ document.querySelectorAll('.faq__item').forEach((item) => {
     btn.addEventListener('click', function () {
       apply(btn.dataset.materialFilter);
     });
+  });
+})();
+
+/* Meta Pixel — Contact event na klik telefonu / WhatsApp / Telegram.
+   Używa publicznego helpera bochenekTrack (no-op gdy brak zgody). */
+(function initContactTracking() {
+  document.addEventListener('click', function (e) {
+    var link = e.target && e.target.closest && e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    var channel = null;
+    if (href.indexOf('tel:') === 0) channel = 'telefon';
+    else if (href.indexOf('wa.me') > -1 || href.indexOf('whatsapp') > -1) channel = 'whatsapp';
+    else if (href.indexOf('t.me') > -1 || href.indexOf('telegram') > -1) channel = 'telegram';
+    if (channel && window.bochenekTrack) {
+      window.bochenekTrack('Contact', { content_name: channel });
+    }
   });
 })();

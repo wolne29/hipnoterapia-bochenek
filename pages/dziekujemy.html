@@ -106,5 +106,27 @@
     </div>
   </footer>
   <script src="../scripts/main.js" defer></script>
+  <script>
+    // Fail-safe Lead event: odpala się przy bezpośrednim wejściu na thank-you.
+    // Czeka maks. 5s aż Pixel się załaduje (po consent), potem rezygnuje.
+    (function () {
+      var fired = false;
+      function fire() {
+        if (fired || !window.fbq) return;
+        fired = true;
+        window.fbq('track', 'Lead', {
+          content_name: 'darmowa-konsultacja',
+          content_category: 'konsultacja-wstepna',
+          currency: 'PLN',
+          value: 0
+        });
+      }
+      if (window.fbq) { fire(); return; }
+      var iv = setInterval(function () {
+        if (window.fbq) { fire(); clearInterval(iv); }
+      }, 200);
+      setTimeout(function () { clearInterval(iv); }, 5000);
+    })();
+  </script>
 </body>
 </html>
