@@ -5117,6 +5117,23 @@ footer {
             hideEventTypeDetails: false,
             layout: "month_view"
         });
+
+        // Meta Pixel — Lead event po udanej rezerwacji (klik "Potwierdz" w Cal.com).
+        // Cal.com wysyla 'bookingSuccessful' do parent po zapisaniu bookingu w bazie.
+        // Helper bochenekTrack jest no-op gdy user nie zaakceptowal cookies (RODO).
+        Cal.ns.konsultacja("on", {
+            action: "bookingSuccessful",
+            callback: function (e) {
+                if (window.bochenekTrack) {
+                    window.bochenekTrack('Lead', {
+                        content_name: 'darmowa-konsultacja-cal',
+                        content_category: 'konsultacja-wstepna',
+                        currency: 'PLN',
+                        value: 0
+                    });
+                }
+            }
+        });
         </script>
 
         <div class="calcom-bottom reveal active">
