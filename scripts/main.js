@@ -440,7 +440,9 @@ document.querySelectorAll('.faq__item').forEach((item) => {
 })();
 
 /* Meta Pixel — Contact event na klik telefonu / WhatsApp / Telegram.
-   Używa publicznego helpera bochenekTrack (no-op gdy brak zgody). */
+   Plus rozroznienie: klik wewnatrz sekcji #kontakt ("Porozmawiajmy") = osobny content_name
+   (porozmawiajmy-telefon/email/wa), zeby user widzial w Mecie skad przyszedl sygnal.
+   Helper bochenekTrack jest no-op gdy brak zgody. */
 (function initContactTracking() {
   document.addEventListener('click', function (e) {
     var link = e.target && e.target.closest && e.target.closest('a[href]');
@@ -448,10 +450,13 @@ document.querySelectorAll('.faq__item').forEach((item) => {
     var href = link.getAttribute('href') || '';
     var channel = null;
     if (href.indexOf('tel:') === 0) channel = 'telefon';
+    else if (href.indexOf('mailto:') === 0) channel = 'email';
     else if (href.indexOf('wa.me') > -1 || href.indexOf('whatsapp') > -1) channel = 'whatsapp';
     else if (href.indexOf('t.me') > -1 || href.indexOf('telegram') > -1) channel = 'telegram';
-    if (channel && window.bochenekTrack) {
-      window.bochenekTrack('Contact', { content_name: channel });
-    }
+    if (!channel || !window.bochenekTrack) return;
+
+    var inPorozmawiajmy = link.closest('#kontakt') !== null;
+    var contentName = inPorozmawiajmy ? ('porozmawiajmy-' + channel) : channel;
+    window.bochenekTrack('Contact', { content_name: contentName });
   });
 })();
