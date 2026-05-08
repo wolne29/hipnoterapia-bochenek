@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://connect.facebook.net; connect-src 'self' https://formsubmit.co https://*.facebook.com https://*.facebook.net; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Hipnoterapia Bochenek — Czy ta metoda może pomóc?</title>
+<meta name="description" content="Test edukacyjny — 5 pytań, 2 minuty. Sprawdź czy hipnoterapia jest właściwą metodą. Bezpłatna konsultacja po teście.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://hipnoterapiabochenek.pl/pages/sprawdz.html">
+<link rel="icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --forest: #1B3A2F;
+    --forest-deep: #0E2419;
+    --gold: #C9A876;
+    --gold-soft: #E0C99A;
+    --cream: #FAF6EF;
+    --cream-deep: #F0E7D6;
+    --paper: #FFFFFF;
+    --ink: #1A1614;
+    --ink-soft: #58524B;
+    --ink-faint: #8A7E6F;
+    --rule: #E5DDC9;
+    --t: 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+    color: var(--ink);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+.sprawdz-header {
+    padding: 16px 24px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center;
+}
+.sprawdz-header a {
+    text-decoration: none;
+    color: var(--forest);
+    font-weight: 700;
+    font-size: 16px;
+}
+.sprawdz-header a span { display: block; font-size: 11px; font-weight: 400; color: var(--ink-faint); margin-top: 2px; }
+.sprawdz-header-back {
+    color: var(--ink-soft) !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+}
+.sprawdz-header-back:hover { color: var(--forest) !important; }
+
+/* MAIN */
+.sprawdz-main {
+    flex: 1;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 16px;
+}
+
+.quiz-wrap {
+    width: 100%; max-width: 580px;
+    background: var(--paper);
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(27, 58, 47, 0.12);
+    padding: 40px 36px 36px;
+    position: relative;
+}
+.quiz-header { text-align: center; margin-bottom: 28px; }
+.quiz-portrait {
+    width: 84px; height: 84px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    display: block;
+    border: 3px solid var(--gold);
+    box-shadow: 0 8px 22px rgba(201, 168, 118, 0.25);
+}
+.quiz-eyebrow {
+    color: var(--gold);
+    font-size: 11.5px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.quiz-title {
+    font-family: "Playfair Display", serif;
+    font-size: 28px; font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+.quiz-sub { color: var(--ink-soft); font-size: 14.5px; }
+.quiz-progress {
+    height: 4px;
+    background: var(--rule);
+    border-radius: 999px;
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+.quiz-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-soft) 100%);
+    border-radius: 999px;
+    width: 20%;
+    transition: width 0.4s ease;
+}
+.quiz-step { display: none; }
+.quiz-step.active { display: block; animation: fadein 0.4s ease; }
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.quiz-question {
+    font-family: "Playfair Display", serif;
+    font-size: 21px; font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 20px;
+    line-height: 1.35;
+}
+.quiz-question-sub {
+    font-size: 13.5px;
+    color: var(--ink-faint);
+    margin-bottom: 18px;
+    margin-top: -12px;
+}
+.quiz-options { display: flex; flex-direction: column; gap: 9px; }
+.quiz-option {
+    background: var(--paper);
+    border: 1.5px solid var(--rule);
+    border-radius: 14px;
+    padding: 14px 18px;
+    font: inherit; font-size: 15px;
+    text-align: left; cursor: pointer;
+    transition: all var(--t);
+    color: var(--ink);
+}
+.quiz-option:hover {
+    border-color: var(--gold);
+    background: rgba(201, 168, 118, 0.06);
+    transform: translateX(2px);
+}
+.quiz-option.selected {
+    border-color: var(--forest);
+    background: var(--forest);
+    color: var(--cream);
+}
+.quiz-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid var(--rule);
+    border-radius: 12px;
+    font: inherit; font-size: 15px;
+    margin-bottom: 12px;
+    background: var(--paper);
+    color: var(--ink);
+}
+.quiz-input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 168, 118, 0.2);
+}
+.quiz-rodo {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 12.5px; color: var(--ink-soft);
+    margin-bottom: 18px; line-height: 1.4;
+}
+.quiz-rodo input { margin-top: 3px; flex-shrink: 0; }
+.quiz-rodo a { color: var(--forest); text-decoration: underline; }
+
+.quiz-nav {
+    display: flex; gap: 12px; align-items: center;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+.quiz-back {
+    background: none; border: none;
+    color: var(--ink-soft);
+    cursor: pointer; font: inherit; font-size: 14px;
+    padding: 10px 4px;
+    transition: color var(--t);
+}
+.quiz-back:hover { color: var(--forest); }
+.quiz-next {
+    background: var(--forest);
+    color: var(--cream);
+    border: none;
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-weight: 700; font: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all var(--t);
+    flex-shrink: 0;
+}
+.quiz-next:hover:not(:disabled) {
+    background: var(--forest-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(27, 58, 47, 0.25);
+}
+.quiz-next:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.quiz-loading {
+    display: none;
+    text-align: center;
+    padding: 40px 0;
+    color: var(--ink-soft);
+}
+.quiz-loading.active { display: block; }
+.quiz-loading-spinner {
+    width: 36px; height: 36px;
+    border: 3px solid var(--rule);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* RESULT */
+.result-wrap { text-align: center; padding: 8px 0; }
+.result-icon {
+    width: 72px; height: 72px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px; color: var(--forest-deep);
+    font-weight: 700;
+    margin: 0 auto 22px;
+    box-shadow: 0 12px 30px rgba(201, 168, 118, 0.3);
+}
+.result-title {
+    font-family: "Playfair Display", serif;
+    font-size: 26px; font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 14px; line-height: 1.3;
+}
+.result-text {
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin-bottom: 28px;
+    line-height: 1.65;
+    text-align: left;
+}
+.result-text em {
+    color: var(--forest);
+    font-style: normal; font-weight: 600;
+}
+.result-cta-primary {
+    display: inline-block;
+    background: var(--forest);
+    color: var(--cream);
+    padding: 16px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700; font-size: 15.5px;
+    transition: all var(--t);
+    box-shadow: 0 8px 24px rgba(27, 58, 47, 0.18);
+    margin-bottom: 12px;
+}
+.result-cta-primary:hover {
+    background: var(--forest-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(27, 58, 47, 0.25);
+}
+.result-cta-secondary {
+    display: block;
+    color: var(--ink-soft);
+    text-decoration: underline;
+    font-size: 13.5px;
+    padding: 12px;
+    margin-top: 4px;
+    transition: color var(--t);
+}
+.result-cta-secondary:hover { color: var(--forest); }
+
+.disclaimer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+.sprawdz-footer {
+    padding: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-faint);
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+}
+.sprawdz-footer a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin: 0 10px;
+}
+.sprawdz-footer a:hover { color: var(--forest); text-decoration: underline; }
+.sprawdz-footer-row { margin-bottom: 8px; }
+
+@media (max-width: 600px) {
+    .sprawdz-main { padding: 20px 8px; }
+    .quiz-wrap { padding: 28px 22px 24px; border-radius: 20px; }
+    .quiz-title { font-size: 23px; }
+    .quiz-question { font-size: 18px; }
+    .quiz-option { font-size: 14.5px; padding: 13px 16px; }
+    .quiz-next { padding: 13px 24px; font-size: 14.5px; }
+    .result-title { font-size: 22px; }
+    .result-text { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+
+<header class="sprawdz-header">
+    <a href="/">
+        Hipnoterapia Bochenek
+        <span>Tomasz Bochenek</span>
+    </a>
+    <a href="/" class="sprawdz-header-back">← Strona główna</a>
+</header>
+
+<main class="sprawdz-main">
+<div class="quiz-wrap">
+    <div class="quiz-header">
+        <img class="quiz-portrait" src="../assets/images/about-tomasz.jpg" alt="Tomasz Bochenek" onerror="this.style.display='none'">
+        <div class="quiz-eyebrow">Test edukacyjny · 2 minuty</div>
+        <h1 class="quiz-title">Czy hipnoterapia może być właściwą metodą?</h1>
+        <p class="quiz-sub">Tomasz Bochenek · Hipnoterapeuta · Gdańsk-Letnica</p>
+    </div>
+
+    <div class="quiz-progress"><div class="quiz-progress-bar" id="progress"></div></div>
+
+    <!-- KROK 1 -->
+    <div class="quiz-step active" data-step="1">
+        <p class="quiz-question">Co najczęściej powraca, gdy myślisz o sobie ostatnio?</p>
+        <div class="quiz-options">
+            <button class="quiz-option" data-value="sen">Spokojny sen, który nie przychodzi</button>
+            <button class="quiz-option" data-value="decyzje">Trudne decyzje i ich odkładanie</button>
+            <button class="quiz-option" data-value="wzorce">Stare wzorce, które się powtarzają</button>
+            <button class="quiz-option" data-value="pewnosc">Pewność siebie w nowych sytuacjach</button>
+            <button class="quiz-option" data-value="emocje">Trudne emocje, które wracają</button>
+            <button class="quiz-option" data-value="inne">Coś innego</button>
+        </div>
+    </div>
+
+    <!-- KROK 2 -->
+    <div class="quiz-step" data-step="2">
+        <p class="quiz-question">Od jak dawna ten temat się pojawia?</p>
+        <div class="quiz-options">
+            <button class="quiz-option" data-value="krotko">Kilka tygodni</button>
+            <button class="quiz-option" data-value="miesiace">Kilka miesięcy</button>
+            <button class="quiz-option" data-value="rok">Około rok</button>
+            <button class="quiz-option" data-value="dlugo">Kilka lat lub dłużej</button>
+        </div>
+    </div>
+
+    <!-- KROK 3 -->
+    <div class="quiz-step" data-step="3">
+        <p class="quiz-question">Co dotychczas zostało już sprawdzone?</p>
+        <div class="quiz-options">
+            <button class="quiz-option" data-value="self">Samodzielna praca, książki, podcasty</button>
+            <button class="quiz-option" data-value="rozmowy">Rozmowy z bliskimi</button>
+            <button class="quiz-option" data-value="psychoterapia">Psychoterapia</button>
+            <button class="quiz-option" data-value="lekarz">Konsultacja u lekarza, specjalisty</button>
+            <button class="quiz-option" data-value="nic">Nic – dopiero teraz szukam</button>
+        </div>
+    </div>
+
+    <!-- KROK 4 -->
+    <div class="quiz-step" data-step="4">
+        <p class="quiz-question">Co byłoby najważniejszym efektem rozmowy?</p>
+        <div class="quiz-options">
+            <button class="quiz-option" data-value="info">Dowiedzieć się czy ta metoda może pomóc</button>
+            <button class="quiz-option" data-value="plan">Konkretny plan działania</button>
+            <button class="quiz-option" data-value="zrozumienie">Profesjonalna rozmowa, ktoś kto zrozumie</button>
+            <button class="quiz-option" data-value="ocena">Ocena – czy to dla terapeuty czy dla lekarza</button>
+            <button class="quiz-option" data-value="open">Jeszcze nie wiem, chcę porozmawiać</button>
+        </div>
+    </div>
+
+    <!-- KROK 5 -->
+    <div class="quiz-step" data-step="5">
+        <p class="quiz-question">Imię i kontakt</p>
+        <p class="quiz-question-sub">Oddzwaniam zwykle w ciągu 2–4 godzin (max 24h). Bez spamu.</p>
+        <input class="quiz-input" id="q-name" type="text" placeholder="Imię" autocomplete="given-name" required>
+        <input class="quiz-input" id="q-phone" type="tel" placeholder="Telefon" autocomplete="tel" required>
+        <input class="quiz-input" id="q-email" type="email" placeholder="E-mail (opcjonalnie)" autocomplete="email">
+        <label class="quiz-rodo">
+            <input type="checkbox" id="q-rodo" required>
+            <span>Wyrażam zgodę na kontakt w sprawie konsultacji. Dane chronione zgodnie z <a href="polityka-prywatnosci.html" target="_blank">polityką prywatności</a>.</span>
+        </label>
+    </div>
+
+    <!-- LOADING -->
+    <div class="quiz-loading" id="loading">
+        <div class="quiz-loading-spinner"></div>
+        <p>Wysyłam Twoje zgłoszenie…</p>
+    </div>
+
+    <!-- RESULT -->
+    <div class="quiz-step" data-step="result">
+        <div class="result-wrap">
+            <div class="result-icon">✓</div>
+            <h2 class="result-title" id="result-title">Dziękuję, kontakt zapisany.</h2>
+            <p class="result-text" id="result-text">
+                W mojej praktyce widzę, że ludzie z podobnym kontekstem zwykle osiągają rezultaty w cyklu <em>2–6 sesji</em>. Pierwsza, bezpłatna konsultacja trwa 30 minut – służy temu, by wspólnie ocenić, czy ta metoda pasuje do tego, z czym przychodzisz.
+            </p>
+            <a href="https://cal.com/tomasz-bochenek-mwslzu/bezpłatna-konsultacja-hipnoterapii" class="result-cta-primary" target="_blank" rel="noopener">Wybierz termin →</a>
+            <a href="oferta.html" class="result-cta-secondary">Wolisz najpierw przeczytać o metodzie? Pełna oferta →</a>
+        </div>
+    </div>
+
+    <div class="quiz-nav" id="nav">
+        <button class="quiz-back" id="back" style="visibility: hidden;">← Wróć</button>
+        <button class="quiz-next" id="next" disabled>Dalej →</button>
+    </div>
+
+    <p class="disclaimer">
+        Treści mają charakter edukacyjny i nie zastępują konsultacji medycznej ani psychologicznej. Hipnoterapia jest metodą uzupełniającą.
+    </p>
+</div>
+</main>
+
+<footer class="sprawdz-footer">
+    <div class="sprawdz-footer-row">
+        <a href="regulamin.html">Regulamin</a> ·
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a> ·
+        <a href="https://wa.me/48732137266" target="_blank" rel="noopener">WhatsApp</a> ·
+        <a href="tel:+48732137266">+48 732 137 266</a>
+    </div>
+    <div>&copy; 2026 Hipnoterapia Bochenek — Tomasz Bochenek, Gdańsk-Letnica</div>
+</footer>
+
+<script>
+(function() {
+    var STEPS_TOTAL = 5;
+    var state = { step: 1, answers: {} };
+
+    var Q1_LABELS = {
+        sen: 'Spokojny sen, który nie przychodzi',
+        decyzje: 'Trudne decyzje i ich odkładanie',
+        wzorce: 'Stare wzorce, które się powtarzają',
+        pewnosc: 'Pewność siebie w nowych sytuacjach',
+        emocje: 'Trudne emocje, które wracają',
+        inne: 'Coś innego'
+    };
+    var Q2_LABELS = {
+        krotko: 'Kilka tygodni',
+        miesiace: 'Kilka miesięcy',
+        rok: 'Około rok',
+        dlugo: 'Kilka lat lub dłużej'
+    };
+    var Q3_LABELS = {
+        self: 'Samodzielna praca, książki, podcasty',
+        rozmowy: 'Rozmowy z bliskimi',
+        psychoterapia: 'Psychoterapia',
+        lekarz: 'Konsultacja u lekarza/specjalisty',
+        nic: 'Nic – dopiero teraz szuka'
+    };
+    var Q4_LABELS = {
+        info: 'Dowiedzieć się czy ta metoda może pomóc',
+        plan: 'Konkretny plan działania',
+        zrozumienie: 'Profesjonalna rozmowa, ktoś kto zrozumie',
+        ocena: 'Ocena – czy to dla terapeuty czy dla lekarza',
+        open: 'Jeszcze nie wie, chce porozmawiać'
+    };
+
+    function showStep(s) {
+        document.querySelectorAll('.quiz-step').forEach(function(el) {
+            el.classList.toggle('active', el.dataset.step === String(s));
+        });
+        document.getElementById('loading').classList.remove('active');
+        state.step = s;
+
+        var pct = s === 'result' ? 100 : (s / STEPS_TOTAL) * 100;
+        document.getElementById('progress').style.width = pct + '%';
+
+        var nav = document.getElementById('nav');
+        var back = document.getElementById('back');
+        var next = document.getElementById('next');
+
+        if (s === 'result') {
+            nav.style.display = 'none';
+            return;
+        }
+        nav.style.display = 'flex';
+        back.style.visibility = (s === 1) ? 'hidden' : 'visible';
+        next.textContent = (s === 5) ? 'Wyślij →' : 'Dalej →';
+
+        validateStep();
+    }
+
+    function validateStep() {
+        var s = state.step;
+        var step = document.querySelector('.quiz-step[data-step="' + s + '"]');
+        var next = document.getElementById('next');
+        if (s === 5) {
+            var name = document.getElementById('q-name').value.trim();
+            var phone = document.getElementById('q-phone').value.trim();
+            var rodo = document.getElementById('q-rodo').checked;
+            next.disabled = !(name && phone && rodo);
+        } else {
+            next.disabled = step.querySelector('.quiz-option.selected') === null;
+        }
+    }
+
+    document.querySelectorAll('.quiz-option').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var step = btn.closest('.quiz-step');
+            step.querySelectorAll('.quiz-option').forEach(function(o) {
+                o.classList.remove('selected');
+            });
+            btn.classList.add('selected');
+            state.answers['q' + step.dataset.step] = btn.dataset.value;
+            validateStep();
+        });
+    });
+
+    ['q-name', 'q-phone', 'q-email'].forEach(function(id) {
+        document.getElementById(id).addEventListener('input', validateStep);
+    });
+    document.getElementById('q-rodo').addEventListener('change', validateStep);
+
+    document.getElementById('next').addEventListener('click', function() {
+        if (state.step === 5) {
+            state.answers.name = document.getElementById('q-name').value.trim();
+            state.answers.phone = document.getElementById('q-phone').value.trim();
+            state.answers.email = document.getElementById('q-email').value.trim();
+            submitQuiz();
+            return;
+        }
+        showStep(state.step + 1);
+    });
+
+    document.getElementById('back').addEventListener('click', function() {
+        if (state.step > 1) showStep(state.step - 1);
+    });
+
+    function showLoading() {
+        document.querySelectorAll('.quiz-step').forEach(function(el) { el.classList.remove('active'); });
+        document.getElementById('nav').style.display = 'none';
+        document.getElementById('loading').classList.add('active');
+    }
+
+    function submitQuiz() {
+        showLoading();
+
+        // Pixel Lead event (gated by cookie consent)
+        if (window.bochenekTrack) {
+            window.bochenekTrack('Lead', {
+                content_name: 'darmowa-konsultacja-quiz',
+                content_category: 'konsultacja-wstepna',
+                currency: 'PLN',
+                value: 0
+            });
+        }
+
+        var payload = {
+            _subject: 'Quiz konsultacja: ' + state.answers.name + ' (' + state.answers.phone + ')',
+            _template: 'table',
+            _captcha: 'false',
+            _autoresponse: 'Dziękuję za wypełnienie testu na hipnoterapiabochenek.pl. Skontaktuję się w ciągu 24 godzin (zwykle 2-4 h). Pozdrawiam, Tomasz Bochenek',
+            Imie: state.answers.name,
+            Telefon: state.answers.phone,
+            Email: state.answers.email || '(nie podano)',
+            'Powracajacy temat': Q1_LABELS[state.answers.q1] || state.answers.q1,
+            'Od jak dawna': Q2_LABELS[state.answers.q2] || state.answers.q2,
+            'Co probowal': Q3_LABELS[state.answers.q3] || state.answers.q3,
+            'Najwazniejszy efekt': Q4_LABELS[state.answers.q4] || state.answers.q4
+        };
+        if (state.answers.email) payload._replyto = state.answers.email;
+
+        fetch('https://formsubmit.co/ajax/hipnoterapiabochenek@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(function(r) { return r.json(); })
+        .catch(function() { /* nawet jak fetch padnie, pokazujemy result - mail moze sie wyslac z opóznieniem */ })
+        .finally(function() {
+            var titles = {
+                sen: 'Praca nad spokojnym snem – kontakt zapisany',
+                decyzje: 'Praca nad jasnością – kontakt zapisany',
+                wzorce: 'Praca nad wzorcami – kontakt zapisany',
+                pewnosc: 'Praca nad pewnością – kontakt zapisany',
+                emocje: 'Praca nad emocjami – kontakt zapisany',
+                inne: 'Indywidualna konsultacja – kontakt zapisany'
+            };
+            document.getElementById('result-title').textContent = titles[state.answers.q1] || titles.inne;
+            showStep('result');
+        });
+    }
+
+    showStep(1);
+})();
+</script>
+
+<!-- Cookie consent + Meta Pixel (loaded after consent) -->
+<script src="../scripts/cookie-consent.js" defer></script>
+<script src="../scripts/main.js" defer></script>
+</body>
+</html>
